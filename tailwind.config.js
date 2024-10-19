@@ -30,6 +30,10 @@ module.exports = {
     colors: {
       'White':'#fff',
       'black':'#000000',
+      'nWhite':'#F8F8F8',
+
+      'darkGray':'#252525',
+      'Gray':'#6E6E6E',
       
         
     },
@@ -92,7 +96,7 @@ module.exports = {
         '95p':'95%',
         '80p':'80%',
 
-        '90p':'95%',
+        '95p':'95%',
       },
       maxWidth: {
         'x100': '100%',
