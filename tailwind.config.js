@@ -34,7 +34,8 @@ module.exports = {
       'gray':'#6E6E6E',
       'darkov':'#0E0E0ED9',
        'darkgray' :'#252525',
-       'dark1':'#0E0E0E'
+       'dark1':'#0E0E0E',
+       'black1':'#131313'
     },
 
     fontFamily: {
@@ -92,10 +93,7 @@ module.exports = {
       width:{
         '85p':'85%',
         '90p':'90%',
-        '95p':'95%',
         '80p':'80%',
-
-        '90p':'95%',
       },
       maxWidth: {
         'x100': '100%',
