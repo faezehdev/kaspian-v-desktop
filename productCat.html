@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="/css/swiper.css">
     <link rel="stylesheet" href="/css/outputDesk.css">
 </head>
-<body>
-    <main class="ProductCat-C" dir="rtl">
-        <header class="DesktopHeader group/header w-full fixed top-0 left-0 right-0 h-[15vh] flex
+<body class="bg-White1">
+    <main class="ProductCat-C h-screen overflow-hidden w-screen flex" dir="rtl">
+        <header class="DesktopHeader group/header w-full fixed z-[999] top-0 left-0 right-0 h-[15vh] flex
         justify-center items-center before:absolute before:w-full before:duration-150 before:ease-out
          [&.showBG]:before:h-full
         before:h-0 before:bg-darkov before:z-[-1]" dir="rtl">
@@ -18,19 +18,19 @@
                 <div class="Right w-full flex justify-start items-center">
                     <ul class="Menu w-full flex justify-between items-center">
                         <li class="Menu-Item hover-item" id="product">
-                            <a href="" class="Menu-Link hover:text-gray duration-500
+                            <a href="" class="Menu-Link group-[&.dark]/header:text-darkgray hover:text-gray duration-500
                              font-IRANSansWeb400 font-normal text-sm leading-21.91 text-White1">
                                 محصولات
                             </a>
                         </li>
                         <li class="Menu-Item hover-item" id="course">
-                            <a href="" class="Menu-Link hover:text-gray duration-500
+                            <a href="" class="Menu-Link hover:text-gray group-[&.dark]/header:text-darkgray duration-500
                             font-IRANSansWeb400 font-normal text-sm leading-21.91 text-White1">
                                 آموزش‌ها
                             </a>
                         </li>
                         <li class="Menu-Item">
-                            <a href="" class="Menu-Link hover:text-gray duration-500
+                            <a href="" class="Menu-Link hover:text-gray group-[&.dark]/header:text-darkgray duration-500
                             font-IRANSansWeb400 font-normal text-sm leading-21.91 text-White1">
                                 دانلود کاتالوگ
                             </a>
@@ -58,19 +58,19 @@
                 <div class="Left w-full flex justify-start items-center">
                     <ul class="Menu w-full flex justify-between items-center">
                         <li class="Menu-Item">
-                            <a href="" class="Menu-Link hover:text-gray duration-500
+                            <a href="" class="Menu-Link hover:text-gray group-[&.dark]/header:text-darkgray duration-500
                              font-IRANSansWeb400 font-normal text-sm leading-21.91 text-White1">
                                 درخواست نمایندگی
                             </a>
                         </li>
                         <li class="Menu-Item">
-                            <a href="" class="Menu-Link hover:text-gray duration-500
+                            <a href="" class="Menu-Link hover:text-gray group-[&.dark]/header:text-darkgray duration-500
                              font-IRANSansWeb400 font-normal text-sm leading-21.91 text-White1">
                                 درباره‌ی ما
                             </a>
                         </li>
                         <li class="Menu-Item">
-                            <a href="" class="Menu-Link hover:text-gray duration-500
+                            <a href="" class="Menu-Link hover:text-gray group-[&.dark]/header:text-darkgray duration-500
                              font-IRANSansWeb400 font-normal text-sm leading-21.91 text-White1">
                                 تماس با ما
                             </a>
@@ -87,8 +87,8 @@
                 </div>    
             </div>
         </header>
-        <div class="HoverMenu-C group/hoverMenu [&.show]:h-[70vh] [&.showC]:h-[40vh] ease-out duration-300 
-         fixed top-[15vh] left-0 right-0 bg-darkov h-0 overflow-hidden">
+        <div class="HoverMenu-C group/hoverMenu [&.show]:h-[70vh] z-[999] [&.showC]:h-[40vh] ease-out duration-300 
+         fixed top-[15vh] left-0 right-0 bg-darkov h-0 overflow-hidden ">
             <div class="Pro-container menus hidden py-[5em] overflow-y-auto w-90p gap-5 border-t-[1px] border-White1
              mx-auto duration-75 [&.showMenu]:grid grid-cols-[1fr,1fr,1fr,1fr,1fr] h-full" id="scrollContainer">
                 <a href="" class="Product w-full flex flex-col gap-3 group/pro">
@@ -216,12 +216,277 @@
       </a>
             </div>
         </div>
-        <img src="images/image_landing.png" alt="" class="w-full object-cover">
+  <div class="swiper-Container mt-auto
+   w-screen h-[85vh] overflow-hidden flex relative pl-[1.5em]" dir="rtl">
+    <div class="swiper-wrapper Pin-Wrapp w-screen h-full " >
+        <div class="swiper-slide h-full" id="section-0">
+           <div class="Wrapp w-auto h-full flex" data-index="0">
+              <div class="BannerSec h-full w-auto flex justify-start items-start">
+                <div class="IMG w-[30vw] relative h-[80%]">
+                    <img src="images/image_landing.png" alt="" class="w-full h-full object-cover">
+                </div>
+              <span class="Pro-BTN overflow-hidden self-end translate-x-[50%] w-[200px] h-[200px] hover:cursor-pointer bg-darkgray rounded-full
+              flex flex-col justify-center items-center gap-3">
+                <span class="text font-IRANSansWeb400 translate-y-[300px] duration-[.3s]
+                 font-normal text-base leading-25.04 text-White text-center">
+                    دسته‌بندی محصولات
+                </span>
+                <span class="icon translate-y-[300px] duration-[.3s] w-auto flex justify-center items-center">
+                    <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 7L24.5 7M6.5 1L0.5 7L6.5 13" stroke="#F8F8F8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>            
+                </span>
+              </span>
+              </div>
+           </div>
+        </div>
+        <div class="swiper-slide pro group/product">
+            <div class="Wrapp first:border-r-[1px] border-gray h-full">
+               <div class="Pro-Cat h-full w-[300px] flex flex-col justify-between items-start px-[2em]">
+                <div class="Top w-full flex justify-start flex-col items-start gap-2">
+                    <div class="Title w-full flex justify-start items-start overflow-hidden">
+                        <a href="" class="w-auto flex justify-start items-start">
+                        <h2 class="font-IRANSansWeb500 translate-y-[100%] 
+                        group-[&.inner-visible]/product:translate-y-[0] duration-[1s]
+                         font-medium text-sm leading-21.91 text-dark1">
+                            اکسسوری
+                        </h2></a>
+                    </div>
+                    <div class="Text  w-full flex justify-start items-start flex-col overflow-hidden">
+                        <p class="font-IRANSansWeb400 font-normal text-xs translate-y-[100%] duration-[1s]
+                         leading-18.78 text-darkgray group-[&.inner-visible]/product:translate-y-[0]">
+                            توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود.
+                        </p>
+                    </div>
+                </div>
+                <div class="Bottom w-full flex justify-center items-center">
+                    <div class="IMG w-full flex justify-center items-center overflow-hidden">
+                        <a href="" class="w-full flex justify-center items-center">
+                        <img src="images/product_image.png" alt="" 
+                        class="w-full group-[&.inner-visible]/product:scale-[1]
+                        object-cover scale-[1.4] duration-[1s]"></a>
+                    </div>
+                </div>
+               </div>
+            </div>
+         </div>
+         <div class="swiper-slide pro group/product">
+            <div class="Wrapp first:border-r-[1px] border-gray h-full">
+               <div class="Pro-Cat h-full w-[300px] flex flex-col justify-between items-start px-[2em]">
+                <div class="Top w-full flex justify-start flex-col items-start gap-2">
+                    <div class="Title w-full flex justify-start items-start overflow-hidden">
+                        <a href="" class="w-auto flex justify-start items-start">
+                        <h2 class="font-IRANSansWeb500 translate-y-[100%] 
+                        group-[&.inner-visible]/product:translate-y-[0] duration-[1s]
+                         font-medium text-sm leading-21.91 text-dark1">
+                            اکسسوری
+                        </h2></a>
+                    </div>
+                    <div class="Text  w-full flex justify-start items-start flex-col overflow-hidden">
+                        <p class="font-IRANSansWeb400 font-normal text-xs translate-y-[100%] duration-[1s]
+                         leading-18.78 text-darkgray group-[&.inner-visible]/product:translate-y-[0]">
+                            توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود.
+                        </p>
+                    </div>
+                </div>
+                <div class="Bottom w-full flex justify-center items-center">
+                    <div class="IMG w-full flex justify-center items-center overflow-hidden">
+                        <a href="" class="w-full flex justify-center items-center">
+                        <img src="images/product_image.png" alt="" 
+                        class="w-full group-[&.inner-visible]/product:scale-[1]
+                        object-cover scale-[1.4] duration-[1s]"></a>
+                    </div>
+                </div>
+               </div>
+            </div>
+         </div>
+         <div class="swiper-slide pro group/product">
+            <div class="Wrapp first:border-r-[1px] border-gray h-full">
+               <div class="Pro-Cat h-full w-[300px] flex flex-col justify-between items-start px-[2em]">
+                <div class="Top w-full flex justify-start flex-col items-start gap-2">
+                    <div class="Title w-full flex justify-start items-start overflow-hidden">
+                        <a href="" class="w-auto flex justify-start items-start">
+                        <h2 class="font-IRANSansWeb500 translate-y-[100%] 
+                        group-[&.inner-visible]/product:translate-y-[0] duration-[1s]
+                         font-medium text-sm leading-21.91 text-dark1">
+                            اکسسوری
+                        </h2></a>
+                    </div>
+                    <div class="Text  w-full flex justify-start items-start flex-col overflow-hidden">
+                        <p class="font-IRANSansWeb400 font-normal text-xs translate-y-[100%] duration-[1s]
+                         leading-18.78 text-darkgray group-[&.inner-visible]/product:translate-y-[0]">
+                            توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود.
+                        </p>
+                    </div>
+                </div>
+                <div class="Bottom w-full flex justify-center items-center">
+                    <div class="IMG w-full flex justify-center items-center overflow-hidden">
+                        <a href="" class="w-full flex justify-center items-center">
+                        <img src="images/product_image.png" alt="" 
+                        class="w-full group-[&.inner-visible]/product:scale-[1]
+                        object-cover scale-[1.4] duration-[1s]"></a>
+                    </div>
+                </div>
+               </div>
+            </div>
+         </div>
+         <div class="swiper-slide pro group/product">
+            <div class="Wrapp first:border-r-[1px] border-gray h-full">
+               <div class="Pro-Cat h-full w-[300px] flex flex-col justify-between items-start px-[2em]">
+                <div class="Top w-full flex justify-start flex-col items-start gap-2">
+                    <div class="Title w-full flex justify-start items-start overflow-hidden">
+                        <a href="" class="w-auto flex justify-start items-start">
+                        <h2 class="font-IRANSansWeb500 translate-y-[100%] 
+                        group-[&.inner-visible]/product:translate-y-[0] duration-[1s]
+                         font-medium text-sm leading-21.91 text-dark1">
+                            اکسسوری
+                        </h2></a>
+                    </div>
+                    <div class="Text  w-full flex justify-start items-start flex-col overflow-hidden">
+                        <p class="font-IRANSansWeb400 font-normal text-xs translate-y-[100%] duration-[1s]
+                         leading-18.78 text-darkgray group-[&.inner-visible]/product:translate-y-[0]">
+                            توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود.
+                        </p>
+                    </div>
+                </div>
+                <div class="Bottom w-full flex justify-center items-center">
+                    <div class="IMG w-full flex justify-center items-center overflow-hidden">
+                        <a href="" class="w-full flex justify-center items-center">
+                        <img src="images/product_image.png" alt="" 
+                        class="w-full group-[&.inner-visible]/product:scale-[1]
+                        object-cover scale-[1.4] duration-[1s]"></a>
+                    </div>
+                </div>
+               </div>
+            </div>
+         </div>
+         <div class="swiper-slide pro group/product">
+            <div class="Wrapp first:border-r-[1px] border-gray h-full">
+               <div class="Pro-Cat h-full w-[300px] flex flex-col justify-between items-start px-[2em]">
+                <div class="Top w-full flex justify-start flex-col items-start gap-2">
+                    <div class="Title w-full flex justify-start items-start overflow-hidden">
+                        <a href="" class="w-auto flex justify-start items-start">
+                        <h2 class="font-IRANSansWeb500 translate-y-[100%] 
+                        group-[&.inner-visible]/product:translate-y-[0] duration-[1s]
+                         font-medium text-sm leading-21.91 text-dark1">
+                            اکسسوری
+                        </h2></a>
+                    </div>
+                    <div class="Text  w-full flex justify-start items-start flex-col overflow-hidden">
+                        <p class="font-IRANSansWeb400 font-normal text-xs translate-y-[100%] duration-[1s]
+                         leading-18.78 text-darkgray group-[&.inner-visible]/product:translate-y-[0]">
+                            توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود.
+                        </p>
+                    </div>
+                </div>
+                <div class="Bottom w-full flex justify-center items-center">
+                    <div class="IMG w-full flex justify-center items-center overflow-hidden">
+                        <a href="" class="w-full flex justify-center items-center">
+                        <img src="images/product_image.png" alt="" 
+                        class="w-full group-[&.inner-visible]/product:scale-[1]
+                        object-cover scale-[1.4] duration-[1s]"></a>
+                    </div>
+                </div>
+               </div>
+            </div>
+         </div>
+         <div class="swiper-slide pro group/product">
+            <div class="Wrapp first:border-r-[1px] border-gray h-full">
+               <div class="Pro-Cat h-full w-[300px] flex flex-col justify-between items-start px-[2em]">
+                <div class="Top w-full flex justify-start flex-col items-start gap-2">
+                    <div class="Title w-full flex justify-start items-start overflow-hidden">
+                        <a href="" class="w-auto flex justify-start items-start">
+                        <h2 class="font-IRANSansWeb500 translate-y-[100%] 
+                        group-[&.inner-visible]/product:translate-y-[0] duration-[1s]
+                         font-medium text-sm leading-21.91 text-dark1">
+                            اکسسوری
+                        </h2></a>
+                    </div>
+                    <div class="Text  w-full flex justify-start items-start flex-col overflow-hidden">
+                        <p class="font-IRANSansWeb400 font-normal text-xs translate-y-[100%] duration-[1s]
+                         leading-18.78 text-darkgray group-[&.inner-visible]/product:translate-y-[0]">
+                            توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود.
+                        </p>
+                    </div>
+                </div>
+                <div class="Bottom w-full flex justify-center items-center">
+                    <div class="IMG w-full flex justify-center items-center overflow-hidden">
+                        <a href="" class="w-full flex justify-center items-center">
+                        <img src="images/product_image.png" alt="" 
+                        class="w-full group-[&.inner-visible]/product:scale-[1]
+                        object-cover scale-[1.4] duration-[1s]"></a>
+                    </div>
+                </div>
+               </div>
+            </div>
+         </div>
+         <div class="swiper-slide pro group/product">
+            <div class="Wrapp first:border-r-[1px] border-gray h-full">
+               <div class="Pro-Cat h-full w-[300px] flex flex-col justify-between items-start px-[2em]">
+                <div class="Top w-full flex justify-start flex-col items-start gap-2">
+                    <div class="Title w-full flex justify-start items-start overflow-hidden">
+                        <a href="" class="w-auto flex justify-start items-start">
+                        <h2 class="font-IRANSansWeb500 translate-y-[100%] 
+                        group-[&.inner-visible]/product:translate-y-[0] duration-[1s]
+                         font-medium text-sm leading-21.91 text-dark1">
+                            اکسسوری
+                        </h2></a>
+                    </div>
+                    <div class="Text  w-full flex justify-start items-start flex-col overflow-hidden">
+                        <p class="font-IRANSansWeb400 font-normal text-xs translate-y-[100%] duration-[1s]
+                         leading-18.78 text-darkgray group-[&.inner-visible]/product:translate-y-[0]">
+                            توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود. توضیحاتی که باید اینجا نوشته شود.
+                        </p>
+                    </div>
+                </div>
+                <div class="Bottom w-full flex justify-center items-center">
+                    <div class="IMG w-full flex justify-center items-center overflow-hidden">
+                        <a href="" class="w-full flex justify-center items-center">
+                        <img src="images/product_image.png" alt="" 
+                        class="w-full group-[&.inner-visible]/product:scale-[1]
+                        object-cover scale-[1.4] duration-[1s]"></a>
+                    </div>
+                </div>
+               </div>
+            </div>
+         </div>
+    </div>
+
+  </div>
+  <div class="Nav fixed w-[50vw] h-[5vh] bottom-[2vh] flex flex-col z-[9999] left-0 right-0 mx-auto">
+    <div class="Top relative w-full flex group/top justify-center items-center"> 
+        <div class="HoverNav absolute flex [&.show]:translate-y-[-100%] [&.show]:opacity-[1]
+         w-auto gap-[.5em] duration-[.6s] translate-y-[100%] opacity-0">
+<!--    
+            <span  class="sec-3 NItem relative font-IRANSansWeb400 hover:text-darkgray hover:cursor-pointer
+            font-normal text-sm leading-21.91 text-gray [&.active]:text-darkgray
+             opacity-[1] duration-[.6s]" data-index="0"  >
+                دستگاه DSR
+             </span>
+             <span  class="sec-3 NItem relative font-IRANSansWeb400 hover:text-darkgray hover:cursor-pointer
+             font-normal text-sm leading-21.91 text-gray [&.active]:tex-darkgray
+              opacity-[1] duration-[.6s]"  data-index="1" >
+                دستگاه DSR
+             </span>
+             <span  class="sec-3 NItem relative font-IRANSansWeb400 hover:text-darkgray hover:cursor-pointer
+             font-normal text-sm leading-21.91 text-gray [&.active]:tex-darkgray
+              opacity-[1] duration-[.6s]"  data-index="2" >
+                دستگاه DSR
+             </span> -->
+          
+        </div>   
+        <span class="Item activeItem group-[&.Hide]/top:translate-y-[-4em] hover:cursor-pointer group-[&.Hide]/top:opacity-0">        
+                دسته‌بندی محصولات            
+        </span>
+        <div class="swiper-pagination"></div>
+    </div>
+   </div>
     </main>
     <script src="js/gsap.js"></script>
     <script src="js/scrollTrigger.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/configDesk.js"></script>
+    <script src="js/productCat.js"></script>
 
 </body>
 </html>

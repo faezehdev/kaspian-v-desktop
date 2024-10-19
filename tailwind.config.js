@@ -32,8 +32,9 @@ module.exports = {
       'black':'#000000',
       'White1':'#F8F8F8',
       'gray':'#6E6E6E',
-      'darkov':'#0E0E0ED9'
-        
+      'darkov':'#0E0E0ED9',
+       'darkgray' :'#252525',
+       'dark1':'#0E0E0E'
     },
 
     fontFamily: {
