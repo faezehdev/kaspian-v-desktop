@@ -5,6 +5,7 @@ let Menus = [...document.querySelectorAll('.menus')]
 let IsDark = false
 hoverItems.forEach(item=>{
     item.addEventListener('mouseenter',(e)=>{
+        header.classList.add('showBG')
         let id =e.currentTarget.getAttribute('id')
         let menu
         if(header.classList.contains('dark')){
@@ -36,9 +37,6 @@ hoverItems.forEach(item=>{
             m.classList.remove('showMenu')
         })
         menu[0].classList.add('showMenu')
-
-
-     header.classList.add('showBG')
     })
 })
 hoverMenu.addEventListener('mouseleave',(e)=>{
