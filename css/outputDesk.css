@@ -673,12 +673,20 @@ video {
   right: 0px;
 }
 
+.right-\[10\%\] {
+  right: 10%;
+}
+
 .top-0 {
   top: 0px;
 }
 
 .top-\[15vh\] {
   top: 15vh;
+}
+
+.top-\[38\%\] {
+  top: 38%;
 }
 
 .isolate {
@@ -772,6 +780,14 @@ video {
   margin-bottom: 5em;
 }
 
+.ml-\[2em\] {
+  margin-left: 2em;
+}
+
+.mr-\[1\.5em\] {
+  margin-right: 1.5em;
+}
+
 .mr-auto {
   margin-right: auto;
 }
@@ -784,28 +800,16 @@ video {
   margin-top: .5em;
 }
 
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+
 .mt-\[8em\] {
   margin-top: 8em;
 }
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-\[\] {
-  margin-top: ;
-}
-
-.mt-\[50px\] {
-  margin-top: 50px;
-}
-
-.mt-\[510px\] {
-  margin-top: 510px;
-}
-
-.mt-\[10px\] {
-  margin-top: 10px;
 }
 
 .box-border {
@@ -919,6 +923,14 @@ video {
   height: 200px;
 }
 
+.h-\[40px\] {
+  height: 40px;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
 .h-\[5vh\] {
   height: 5vh;
 }
@@ -933,6 +945,10 @@ video {
 
 .h-\[85vh\] {
   height: 85vh;
+}
+
+.h-\[90vh\] {
+  height: 90vh;
 }
 
 .h-\[91\%\] {
@@ -979,12 +995,24 @@ video {
   width: 30vw;
 }
 
+.w-\[48\%\] {
+  width: 48%;
+}
+
 .w-\[50vw\] {
   width: 50vw;
 }
 
-.w-\[65vw\] {
-  width: 65vw;
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-\[60vw\] {
+  width: 60vw;
+}
+
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .w-\[90\%\] {
@@ -1018,10 +1046,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[60vw\] {
-  width: 60vw;
 }
 
 .max-w-fit {
@@ -1078,13 +1102,18 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-x-\[80\%\] {
+  --tw-translate-x: 80%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-\[100\%\] {
   --tw-translate-y: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-\[20\%\] {
-  --tw-translate-y: 20%;
+.translate-y-\[15vh\] {
+  --tw-translate-y: 15vh;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1093,13 +1122,8 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-x-\[20\%\] {
-  --tw-translate-x: 20%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-\[80\%\] {
-  --tw-translate-x: 80%;
+.rotate-\[-90deg\] {
+  --tw-rotate: -90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1613,6 +1637,10 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-\[\.5em\] {
@@ -2376,6 +2404,11 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -2481,12 +2514,29 @@ video {
   line-height: 25.04px;
 }
 
+.leading-31 {
+  line-height: 31px;
+}
+
+.leading-31\.03 {
+  line-height: 31.03px;
+}
+
 .leading-40\.96 {
   line-height: 40.96px;
 }
 
 .leading-\[15\.65px\] {
   line-height: 15.65px;
+}
+
+.leading-\[40px\] {
+  line-height: 40px;
+}
+
+.\!text-White1 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(248 248 248 / var(--tw-text-opacity)) !important;
 }
 
 .text-White {
@@ -2859,6 +2909,10 @@ video {
   transition-duration: .3s;
 }
 
+.duration-\[\.5s\] {
+  transition-duration: .5s;
+}
+
 .duration-\[\.6s\] {
   transition-duration: .6s;
 }
@@ -2869,10 +2923,6 @@ video {
 
 .duration-\[1s\] {
   transition-duration: 1s;
-}
-
-.duration-\[\.5s\] {
-  transition-duration: .5s;
 }
 
 .ease-in {
@@ -3259,10 +3309,6 @@ header.dark svg path{
   transform: rotate(-7deg);
 }
 
-.ShowBtn:hover svg path{
-  stroke: #252525;
-}
-
 .Product-Show  #section-0 .line{
   top: 13em;
   transform: rotate(-21deg) translateX(-34%);
@@ -3270,6 +3316,153 @@ header.dark svg path{
   width: 68%;
   right: 0;
   margin-right: auto;
+}
+
+.Product-Show #section-1 .swiper-pagination{
+  position: absolute;
+  bottom: 10vh;
+  top: unset;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.Product-Show #section-1 .swiper-pagination .swiper-pagination-bullet {
+  border: 1px solid #F8F8F8;
+  opacity: 1;
+  background-color: transparent;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -ms-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+}
+
+.Product-Show #section-1 .swiper-pagination .swiper-pagination-bullet-active::before{
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #6E6E6E;
+  left: 25%;
+  top: 25%;
+}
+
+.Product-Show #section-1 .IMG::before{
+  content: '';
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: #0E0E0E99;
+}
+
+.Product-Show #section-1 .swiper-button-prev,
+.Product-Show #section-1 .swiper-button-next{
+  width: 34px;
+  height: 34px;
+  border: 1px solid #F8F8F8;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Product-Show #section-1 .swiper-button-prev::before,
+.Product-Show #section-1 .swiper-button-next::before,
+.Product-Show #section-1 .swiper-button-prev::after,
+.Product-Show #section-1 .swiper-button-next::after{
+  content: '';
+  display: none;
+}
+
+.Product-Show #section-1 .swiper-button-prev svg,
+.Product-Show #section-1 .swiper-button-next svg,
+.Product-Show #section-2 .swiper-button-prev svg,
+.Product-Show #section-2 .swiper-button-next svg{
+  width: 20px !important;
+}
+
+.Product-Show #section-2 .swiper-button-prev,
+.Product-Show #section-2 .swiper-button-next{
+  position: static;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #6E6E6E;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.Product-Show #section-2 .swiper-button-prev::before,
+.Product-Show #section-2 .swiper-button-next::before,
+.Product-Show #section-2 .swiper-button-prev::after,
+.Product-Show #section-2 .swiper-button-next::after{
+  content: '';
+  display: none;
+}
+
+.Product-Show .activeItem.DarkActive svg path{
+  stroke: #F8F8F8;
+}
+
+.Product-Show #section-0.swiper-slide.inner-visible p,
+.Product-Show #section-0.swiper-slide.inner-visible h1{
+  transform: translateY(0) !important;
+  -webkit-transform: translateY(0) !important;
+  -moz-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  -o-transform: translateY(0) !important;
+}
+
+.button {
+  display:inline-block;
+  height:40px;
+  line-height:40px;
+  overflow:hidden;
+  position:relative;
+  text-align:center;
+  color:white;
+  border-radius:20px;
+  transition:0.3s;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  -ms-border-radius:20px;
+  -o-border-radius:20px;
+}
+
+/* BUTTON UP */
+
+.label-up {
+  display:block;
+  margin: 0px 30px 0 20px;
+  height:100%;
+  position:relative;
+  top:0%;
+  transition:0.3s;
+}
+
+.button:hover .label-up {
+  top:-100%;
 }
 
 @media (min-width: 480px) {
@@ -3447,6 +3640,16 @@ header.dark svg path{
   .dark\:lg\:hover\:\[paint-order\:markers\]:hover:is(.dark *) {
     paint-order: markers;
   }
+}
+
+.\[\&\.DarkActive\]\:\!text-White1.DarkActive {
+  --tw-text-opacity: 1 !important;
+  color: rgb(248 248 248 / var(--tw-text-opacity)) !important;
+}
+
+.\[\&\.DarkActive\]\:text-White1.DarkActive {
+  --tw-text-opacity: 1;
+  color: rgb(248 248 248 / var(--tw-text-opacity));
 }
 
 .\[\&\.active\]\:text-darkgray.active {
