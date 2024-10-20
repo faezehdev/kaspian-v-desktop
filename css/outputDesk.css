@@ -812,6 +812,34 @@ video {
   margin-top: auto;
 }
 
+.mr-\[2\%\] {
+  margin-right: 2%;
+}
+
+.ml-\[2\%\] {
+  margin-left: 2%;
+}
+
+.mr-\[3\%\] {
+  margin-right: 3%;
+}
+
+.ml-\[3\%\] {
+  margin-left: 3%;
+}
+
+.mb-\[3em\] {
+  margin-bottom: 3em;
+}
+
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[2em\] {
+  margin-top: 2em;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -935,6 +963,10 @@ video {
   height: 60%;
 }
 
+.h-\[64px\] {
+  height: 64px;
+}
+
 .h-\[80\%\] {
   height: 80%;
 }
@@ -961,6 +993,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.min-h-\[80vh\] {
+  min-height: 80vh;
 }
 
 .w-80p {
@@ -1005,6 +1041,10 @@ video {
 
 .w-\[60vw\] {
   width: 60vw;
+}
+
+.w-\[64px\] {
+  width: 64px;
 }
 
 .w-\[80\%\] {
@@ -2041,6 +2081,10 @@ video {
   border-width: 1px;
 }
 
+.border-\[1px\] {
+  border-width: 1px;
+}
+
 .border-x {
   border-left-width: 1px;
   border-right-width: 1px;
@@ -2115,6 +2159,18 @@ video {
 .border-gray {
   --tw-border-opacity: 1;
   border-color: rgb(110 110 110 / var(--tw-border-opacity));
+}
+
+.border-x-gray {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(110 110 110 / var(--tw-border-opacity));
+  border-right-color: rgb(110 110 110 / var(--tw-border-opacity));
+}
+
+.border-y-gray {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(110 110 110 / var(--tw-border-opacity));
+  border-bottom-color: rgb(110 110 110 / var(--tw-border-opacity));
 }
 
 .border-b-White1 {
@@ -2295,6 +2351,11 @@ video {
   padding-bottom: 1em;
 }
 
+.py-\[2em\] {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
 .py-\[3em\] {
   padding-top: 3em;
   padding-bottom: 3em;
@@ -2311,6 +2372,10 @@ video {
 
 .pt-\[3em\] {
   padding-top: 3em;
+}
+
+.pt-\[8em\] {
+  padding-top: 8em;
 }
 
 .text-left {
@@ -2505,6 +2570,10 @@ video {
   line-height: 25.04px;
 }
 
+.leading-3 {
+  line-height: .75rem;
+}
+
 .leading-31 {
   line-height: 31px;
 }
@@ -2523,6 +2592,10 @@ video {
 
 .leading-\[40px\] {
   line-height: 40px;
+}
+
+.leading-\[46\.96px\] {
+  line-height: 46.96px;
 }
 
 .\!text-White1 {
@@ -3454,6 +3527,10 @@ header.dark svg path{
 
 .button:hover .label-up {
   top:-100%;
+}
+
+header .label-up{
+  margin: 0;
 }
 
 @media (min-width: 480px) {

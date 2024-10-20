@@ -414,3 +414,6 @@ stroke: #F8F8F8;
 .button:hover .label-up {
   top:-100%;
 }
+header .label-up{
+  margin: 0;
+}
