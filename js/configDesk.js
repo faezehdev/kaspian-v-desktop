@@ -2,10 +2,18 @@ let header = document.querySelector('header')
 let hoverMenu = document.querySelector('.HoverMenu-C')
 let hoverItems = document.querySelectorAll('.hover-item')
 let Menus = [...document.querySelectorAll('.menus')]
+let IsDark = false
 hoverItems.forEach(item=>{
     item.addEventListener('mouseenter',(e)=>{
         let id =e.currentTarget.getAttribute('id')
         let menu
+        if(header.classList.contains('dark')){
+            IsDark = true
+            header.classList.remove('dark')
+        }
+        else{
+            IsDark = false
+        }
         switch(id){
             case 'product':{
                 menu = Menus.filter(m=>{
@@ -40,7 +48,12 @@ setTimeout(() => {
     header.classList.remove('showBG')
 },500);
 
-
+if(IsDark){
+    header.classList.add('dark')
+}
+else{
+    header.classList.remove('dark')
+}
 })
 let elements = document.querySelectorAll('.course-link');
 let links = document.querySelector('.Courses-conrainer')
