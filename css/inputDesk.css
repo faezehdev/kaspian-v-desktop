@@ -417,29 +417,6 @@ stroke: #F8F8F8;
 header .label-up{
   margin: 0;
 }
-.Error-container .Bottom,
-.Error-container .bg{
-  border-radius: 99% 0% 7% 4% / 54% 15% 10% 18%;
-  width: 113vw;
-  height: 128vh;
-  transform: rotate(-3deg) translate(5% ,0);
-  }
-.Error-container .bg{
-  left: 0;
-  top: 4em;
-  transform: rotate(-2.5deg) translate(-6%,3%);
-  width: 120vw;
-  background-color: #F8F8F8;
-   }
-.Error-container .Cont ::before{
-  content: '';
-  position: absolute;
-  top: 14%;
-  width: 100%;
-  height: 50px;
-  background-color: #252525;
-  transform: rotate(-21deg);
-  }
-.Error-container .label-up{
-    margin: 0 30px;
-  }
+.Error-container img{
+  transform: scale(1.12) translate(5%,3%);
+}
