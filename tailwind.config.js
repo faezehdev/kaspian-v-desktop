@@ -32,8 +32,10 @@ module.exports = {
       'black':'#000000',
       'White1':'#F8F8F8',
       'gray':'#6E6E6E',
-      'darkov':'#0E0E0ED9'
-        
+      'darkov':'#0E0E0ED9',
+       'darkgray' :'#252525',
+       'dark1':'#0E0E0E',
+       'black1':'#131313'
     },
 
     fontFamily: {
@@ -84,6 +86,7 @@ module.exports = {
          '55':'55px',
          '48':'48px',
          '32':'32px',
+         '40.96':'40.96px',
        
 
       },
@@ -91,10 +94,9 @@ module.exports = {
       width:{
         '85p':'85%',
         '90p':'90%',
-        '95p':'95%',
         '80p':'80%',
+        '95p':'95%',
 
-        '90p':'95%',
       },
       maxWidth: {
         'x100': '100%',

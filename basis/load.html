@@ -1,0 +1,45 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="210504" q="[##cms.query.q##]"> 
+    <member name="productList" type="list" size="300x300" /> 
+</basis>
+<basis core="group" if="'[##db.productList.RowNumber##]' = ''"> 
+    <div class="NoRes relative mt-[7em] w-full mx-auto  flex flex-col gap-2">
+        <div class="Title w-full flex justify-start items-center ">
+            <h1 class="Current w-auto flex justify-start items-start font-IRANSansWeb400 font-normal
+             text-base leading-25.04 text-White1">
+                نتیجه‌ای برای جست و جوی شما پیدا نشد! عبارت مورد نظر را بررسی و مجددا تلاش کنید.
+            </h1>
+        </div>
+      
+        </div>
+</basis>  
+<basis core="print" datamembername="db.productList">
+    <layout>
+        <div class="products-c w-full flex flex-col gap-3 mt-[7em]">
+            <div class="title w-full flex justify-start items-start">
+                <h2 class="font-IRANSansWeb500 font-medium text-base leading-25.4 text-White1">
+                    محصولات
+                </h2>
+            </div>
+            <div class="products w-full grid grid-cols-[1fr,1fr] gap-5">
+        @child
+            </div>
+        </div>
+    </layout>
+    <face>
+        <a href="@link" alt="@title" title="@title" class="product w-full grid grid-cols-[1fr,1fr] justify-start items-start">
+      
+            <div class="right w-full flex justify-center items-center">
+             <div class="IMG w-full flex justify-center items-center">
+                <img src="@00300X00300prp" alt="@title" title="@title" class="w-full object-cover">
+             </div>
+            </div>
+            <div class="left w-full h-full flex justify-center items-center bg-gray">
+                 <div class="Title w-full justify-start items-center ">
+                    <h2 class="font-IRANSansWeb500 font-medium text-base mr-[7%] leading-25.04 text-White">
+                       @title
+                    </h2>
+                 </div>
+            </div>
+        </a>
+    </face>
+</basis>
