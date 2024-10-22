@@ -76,7 +76,11 @@ const swiperHome = new Swiper(".homeSlider", {
  
   },
 });
-
+$('.scroll-down').click(function() {
+  $('html, body').animate({
+    scrollTop: document.querySelector(".section2").offsetTop
+  }, 1000);
+});
 
 
 let overTitle = document.querySelectorAll(".overTitle")

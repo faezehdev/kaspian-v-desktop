@@ -168,7 +168,7 @@
   }
 
 
-  .home .section1 .goDown {
+  .goDown {
     position: absolute;
     bottom: 0;
     transform: translateY(50%);
@@ -182,10 +182,10 @@
     z-index: 100;
     cursor: pointer;
   }
-  .home .section1 .goDown .goIcon .arrowContainer{
+  .goDown .goIcon .arrowContainer{
     margin-top: 20px;
   }
-  .home .section1 .goDown .goIcon {
+  .goDown .goIcon {
     position: relative;
     width: 178px;
     display: flex;
@@ -195,10 +195,10 @@
     height: 178px;
     border-radius: 50%;
   }
-  .home .section1 .goDown .goIcon:hover::before {
+  .goDown .goIcon:hover::before {
     animation: scrollDownBorderAnimation 1s forwards;
   }
-  .home .section1 .goDown .goIcon:before {
+  .goDown .goIcon:before {
     border-radius: 50%;
     border-top: 1px solid #fff;
     content: "";
@@ -209,7 +209,7 @@
     top: 0;
     width: 100%;
   }
-  .home .section1 .goDown .maskArrow {
+  .goDown .maskArrow {
     width: 61px;
     display: block;
     height: 60px;
@@ -229,14 +229,14 @@
     transition: mask-image 2s ease-in-out;
     transition: mask-image 2s ease-in-out, -webkit-mask-image 2s ease-in-out;
   }
-  .home .section1 .goDown .maskArrow span {
+  .goDown .maskArrow span {
     height: 60px;
     width: 60px;
     background-color: #0088D0;
     display: block;
     transform: translateY(-100%);
   }
-  .home .section1 .goDown:hover .maskArrow span {
+  .goDown:hover .maskArrow span {
     transform: translateY(100%);
     transition: 0.5s ease-in-out;
   }
@@ -316,4 +316,44 @@
   .play {
     opacity: 0;
     display: none;
+  }
+
+  .aboutUs .history li:last-child .para::before{
+content: "";
+position: absolute;
+width: 1px;
+height: 100%;
+background-color: #252525;
+right: -7px;
+top: 3px;
+z-index: 1;
+  }
+
+
+  
+  .gallery-pagination .swiper-pagination-bullet::after{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: #6E6E6E;
+    transform: scale(0);
+    transition: 0.5s;
+  }
+  .gallery-pagination .swiper-pagination-bullet{
+    transition: 0.5s;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    opacity: 1;
+    border: 1px solid #F8F8F8;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .gallery-pagination .swiper-pagination-bullet-active::after{
+    transform: scale(1);
   }
