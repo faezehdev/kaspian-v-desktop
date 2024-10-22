@@ -30,6 +30,8 @@ module.exports = {
     colors: {
       'White':'#fff',
       'black':'#000000',
+      'nblack':'#0E0E0E',
+      'txtblack':'#131313',
       'nWhite':'#F8F8F8',
 
       'darkGray':'#252525',
