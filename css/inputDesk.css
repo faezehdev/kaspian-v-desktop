@@ -97,6 +97,9 @@
     font-family: "IRANSansWeb500";
     line-height: 24px;
   }
+  body.ProductCat-C{
+    overflow: hidden;
+  }
 .SearchIconHeader:hover svg path{
     fill: #6E6E6E;
 }  
@@ -419,4 +422,94 @@ header .label-up{
 }
 .Error-container img{
   transform: scale(1.12) translate(5%,3%);
+}
+.c02256 {
+  top: 50%;
+  left: 2%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.c02257 {
+  width: 100%;
+  height: 100%;
+  stroke: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  animation: c02258 2s linear infinite;
+  transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -webkit-animation: c02258 2s linear infinite;
+}
+.c02257 .path {
+  animation: c02259 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+  -webkit-animation: c02259 1.5s ease-in-out infinite;
+}
+.c02261 {
+opacity: 1 !important;
+  pointer-events: all !important;
+}
+.c02260 {
+  top: 0;
+  left: 0%;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+  opacity: 0;
+  padding: 5px;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  pointer-events: none;
+}
+.c02260 svg path {
+  stroke: red;
+  width: 12px;
+  height: 12px;
+}
+@keyframes c02258 {
+  100% {
+    transform: rotate(360deg);
+}
+}
+@keyframes c02259 {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+}
+
+50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+}
+
+100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+}
+}
+.inputBOX input {
+  width: 100%;
+  border: none;
+  background: none;
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.04px;
+  appearance: none;
+  color: #6E6E6E;
+  font-family: 'IRANSansWeb400';
+  outline: none;
+}
+.inputBOX input:focus{
+  border: none;
+  outline: none;
+}
+.inputBOX input::placeholder{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.04px;
+  appearance: none;
+  color: #6E6E6E;
+  font-family: 'IRANSansWeb400';
 }

@@ -1,0 +1,85 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="navcatid" type="tree" name="nav" parentid="[##cms.query.catid##]" />
+ </basis>
+ <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]"> 
+    <member name="listProduct" size="300x300" typeid="159" type="list"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+</head>
+<body class="bg-black1">
+    <main class="ProductList-C overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+    
+        <div class="ProductList-Container w-full flex flex-col mt-[8em]">
+            <div class="Top w-80p mx-auto flex justify-start py-[.5em] items-start border-b-[1px] border-b-White1">
+                <div class="Broads w-auto flex justify-start items-start gap-2">
+                    <span class="broad-item w-auto flex justify-start items-start">
+                        <a href="/" alt="خانه" title="خانه" class="font-IRANSansWeb500 font-medium text-base leading-25.04 text-gray">
+                            خانه
+                        </a>
+                    </span>
+                    <span class="broad-item font-medium text-base leading-25.04 text-White1">
+                       /
+                    </span>
+                    <span class="broad-item w-auto flex justify-start items-start">
+                        <a href="محصولات" alt="محصولات" title="محصولات" class="font-IRANSansWeb500 font-medium text-base leading-25.04 text-gray">
+                            محصولات 
+                        </a>
+                    </span>
+                    <span class="broad-item font-medium text-base leading-25.04 text-White1">
+                        /
+                     </span>
+                     <basis core="print" datamembername="db.nav">
+                         <layout>
+                             @child
+                         </layout>
+                         <face filter="parentcatid=[##cms.query.catid##]">
+                            <span class="broad-item font-medium text-base leading-25.04 text-White1">
+                                <h1  class="font-IRANSansWeb500 font-medium text-base leading-25.04 text-White1">
+                                 @title
+                                </h1>
+                              </span>
+                         </face>
+                     </basis>
+                  
+                </div>
+            </div>
+            <div class="Products w-80p mx-auto grid grid-cols-[1fr,1fr,1fr] gap-[3em] my-[2em]">
+                <basis core="print" datamembername="db.listProduct">
+                    <layout>
+                        @child
+                    </layout>
+                    <face>
+                        <a href="@link"  alt="@title" title="@title" class="Product w-full flex flex-col justify-center items-center
+                        opacity-0">
+                            <div class="IMG relative w-full group/img flex justify-center items-center">
+                                <img src="@00300X00300prp" alt="@title" title="@title" class=" w-full object-cover">
+                                <div class="Hover-img absolute top-0 left-0 z-2 w-full h-full ">
+                                    <img src="@type_159" alt="@title" title="@title" class="group-hover/img:opacity-[1]
+                                    opacity-0 duration-[.8s] w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="Title w-full justify-center items-center my-[.5em]">
+                                <h2 class="font-IRANSansWeb500 text-center font-medium text-base leading-25.04 text-White1">
+                                  @title
+                                </h2>
+                            </div>
+                        </a>
+                    </face>
+                </basis>
+            </div>
+        </div>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+<basis core="call" file="script.inc" />
+<script src="[##cms.cms.cdn##]/js/productList.js"></script> 
+</body>
+</html>

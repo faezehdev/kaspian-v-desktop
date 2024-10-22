@@ -18,7 +18,8 @@ fixNav.addEventListener('mouseleave',()=>{
 let slides= document.querySelectorAll('.swiper-Container .swiper-slide')
 let i =0
 const swiper = new Swiper('.swiper-Container', {
-    slideToClickedSlide: true,
+    slideToClickedSlide: false,
+    allowTouchMove: false,
     slidesPerView: "auto",
    freeMode: {
       enabled: true,
