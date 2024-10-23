@@ -419,3 +419,14 @@ opacity: 1!important;
     transition-delay: 0.8s;
 
    }
+
+   .learning .activeFilterBtn
+   {
+    border: 1px solid #252525!important;
+   }
+   .learning .activeFilterBtn svg{
+    display: block!important;
+   }
+   .learning .activeFilterBtn span{
+    color: #252525!important;
+   }
