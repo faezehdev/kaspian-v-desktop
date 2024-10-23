@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما</title>
+   
+            <meta name="description" content="درباره بازرگانی کاسپین" />
+   
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+</head>
+<body>
+    <div class="aboutUs bg-darkGray">
+        <basis core="call" file="header.inc" />
+        <section class="section1 h-svh relative flex items-center justify-center w-full overflow-hidden">
+            <div class="imgS w-full h-full">
+                <basis core="print" datamembername="db.aboutGallery">
+                 
+                    <face filter="ord=1"> 
+                        <img class="w-full h-full object-cover" src="/@largeIMG" alt="@name">
+                        
+                    </face>
+                </basis>
+            </div>
+            <div class="overTitle absolute">
+                <basis core="print" datamembername="db.aboutus">
+                 
+                    <face filter="TypeID=150">
+                        <h1 class="text-center mb-2.5 font-IRANSansWeb500 text-3xl text-nWhite">
+                          @Answer
+                        </h1>
+                    </face>
+                </basis>
+                <div class="para font-IRANSansWeb400 text-base text-center text-nWhite">
+                    <p>
+                        درباره‌ی ما بیشتر بدانید
+                    </p>
+                </div>
+            </div>
+            <div class="goDown scroll-down">
+                <div class="goIcon">
+                    <div class="arrowContainer">
+                        <span class="maskArrow">
+                            <span></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section2" dir="rtl">
+            <div class="inner flex items-center gap-x-20 justify-between">
+                    <div class="rSide w-[46%]">
+                        <div class="imgS relative after:absolute after:inset-0 after:w-full after:h-full after:bg-gradient-to-r after:from-darkGray after:to-[#25252500]">
+                            <basis core="print" datamembername="db.aboutGallery">
+                                <face filter="ord=2">
+                                    <img class="h-full object-cover" src="/@largeIMG" alt="درباره‌ی ما">
+                                </face>
+                            </basis>
+                        </div>
+                    </div>
+
+                    <div class="lSide pl-20 w-[40%]">
+                        <div class="para font-IRANSansWeb400 text-base text-nWhite">
+                            <basis core="print" datamembername="db.aboutus">
+                              
+                                <face filter="TypeID=129">
+                                    @largetext
+                                </face>
+                            </basis>
+                           
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="section3" dir="rtl">
+            <div class="inner flex items-center gap-x-20 justify-between">
+                <div class="rSide px-20">
+                    <h2 class="font-IRANSansWeb500 text-xl text-nWhite mb-16">
+                        تاریخچه
+                    </h2>
+    
+                    <div class="history">
+                        <ul class="relative after:h-[100%] overflow-hidden after:absolute after:w-px after:bg-White after:top-[13px] after:z-0 after:right-[75px]">
+                          <basis core="print" datamembername="db.history">
+                          
+                              <face>
+                                  <li class="flex pb-12 last:pb-0 items-baseline ">
+                                      <span class="font-IRANSansWeb500 text-xl text-nWhite w-[40px]">
+                                          ۱۴۰۳
+                                      </span>
+                                      <i class="border bg-darkGray shrink-0 z-2 mr-7 rounded-full border-nWhite w-[14px] h-[14px] after:absolute after:w-[6px] after:h-[6px] after:rounded-full after:bg-Gray flex items-center justify-center before:absolute before:top-0 before:bg-nWhite"></i>
+                                      <div class="para relative pr-16 font-IRANSansWeb500 text-base text-nWhite ">
+                                          <p>
+                                              یک اتفاق یا رویداد مهم در تاریخچه‌ی مجموعه
+                                          </p>
+                                      </div>
+                                  </li>
+                                  
+                              </face>
+                          </basis>
+                          
+                       
+                      
+                        </ul>
+                    </div>
+                </div>
+                <div class="lSide w-[46%]">
+                    <div class="imgS relative after:absolute after:inset-0 after:w-full after:h-full after:bg-gradient-to-l after:from-darkGray after:to-[#25252500]">
+                        <img class="h-full object-cover" src="images/ریل1.png" alt="درباره‌ی ما">
+                    </div>
+                </div>
+          
+            </div>
+        </section>
+        <section class="section4">
+
+            <div class="swiper aboutGallery relative" dir="rtl">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="imgS relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-[#0E0E0E00] after:to-[#0E0E0E00]">
+                        <img class="w-full" src="images/image_landing2.png" alt="@name">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="imgS relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-[#0E0E0E00] after:to-[#0E0E0E00]">
+                        <img class="w-full" src="images/image_landing2.png" alt="@name">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="imgS relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-[#0E0E0E00] after:to-[#0E0E0E00]">
+                        <img class="w-full" src="images/image_landing2.png" alt="@name">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="imgS relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-[#0E0E0E00] after:to-[#0E0E0E00]">
+                        <img class="w-full" src="images/image_landing2.png" alt="@name">
+                    </div>
+                  </div>
+               
+                </div>
+            
+                    <div class="nextGallery absolute cursor-pointer left-[2.5%] top-[50%] z-1">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="33" height="33" rx="16.5" stroke="#F8F8F8"/>
+                            <path d="M10.875 17L24 17M13.5 13.5L10 17L13.5 20.5" stroke="#6E6E6E" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                    </div>
+                    <div class="prevGallery absolute cursor-pointer right-[2.5%] top-[50%] z-1">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="33" height="33" rx="16.5" stroke="#F8F8F8"/>
+                            <path d="M23.125 17H10M20.5 20.5L24 17L20.5 13.5" stroke="#6E6E6E" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                    </div>
+
+                    <div class="gallery-pagination z-1 absolute flex justify-center items-center left-0 right-0 !bottom-7"></div>
+              </div>
+        </section>
+        <section class="section5" dir="rtl">
+            <div class="inner flex items-center gap-x-20 justify-between">
+                    <div class="rSide w-[46%]">
+                        <div class="imgS relative after:absolute after:inset-0 after:w-full after:h-full after:bg-gradient-to-r after:from-darkGray after:to-[#25252500]">
+                            <img class="h-full object-cover" src="images/ریل1.png" alt="درباره‌ی ما">
+                        </div>
+                    </div>
+
+                    <div class="lSide pl-20 w-[40%]">
+                        <div class="para font-IRANSansWeb400 text-base text-nWhite">
+                            <p>
+                                بازرگانی کاسپین فعالیت خود را در سال 1386 در زمینه واردات یراق آلات و فروش تجهیزات کابینت آغاز نمود، در سال 1392 تولد برند تجاری بلو گام در مسیری تازه نهاد.
+کیفیت بالای محصولات و ضمانت 3 ساله بی قید و شرط تمامی محصولات و ارائه خدمات پس از فروش باعث شد تا برند بلو با حمایت و درخواست شما همراهان تنوع اقلامی و سبد کالایی خود را گسترده تر نماید.
+در حال حاضر این برند در زمینه یراق آلات و اکسسوری کابینت دارای بیش از 200 قلم کالا شامل انواع لولاها، ریل ها، جک ها، پیچ ها، قفل ها، مکانیسم ها، اکسسوری ها، کابینت، پریز توکار و ... می باشد.
+
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <basis core="call" file="footer.inc" />
+    </div>
+
+<basis core="call" file="script.inc" />
+<script src="[##cms.cms.cdn##]/_js/scroll.js"></script>
+<script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+<script src="[##cms.cms.cdn##]/js/aboutUs.js"></script>
+
+</body>
+</html>

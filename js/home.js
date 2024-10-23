@@ -96,3 +96,34 @@ overTitle.forEach(element => {
     
   })
 });
+
+
+$('.home').imagesLoaded( function() {
+  
+  const text = document.querySelector("#text");
+const replay = document.querySelector("#loader");
+const bar = document.querySelector("#bar");
+const loader = document.querySelector("#percent");
+
+let load = 0;
+
+setInterval(() => {
+  load = load + Math.floor(Math.random() * 5 + 1);
+  if (load < 100) {
+    loader.textContent = load + "%";
+    bar.style.transform = `scalex(${load}%)`;
+    console.log(load);
+    
+  } else {
+    bar.style.transform = `scalex(100%)`;
+    loader.textContent = "100%";
+  }
+}, 100);
+
+setTimeout(() => {
+  document.querySelector(".loading").style.transform="translateY(-100%)"
+}, 4000);
+});
+
+
+

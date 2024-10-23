@@ -846,3 +846,32 @@ opacity: 1!important;
    .learning .activeFilterBtn span{
     color: #252525!important;
    }
+
+
+
+
+   
+  .home .formHomeBtn p{
+    transform: translateY(0);
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .home .formHomeBtn span{
+    transform: translateY(0);
+    transition: 0.4s ease-in-out;
+    display: block;
+  }
+  .home .formHomeBtn:hover span {
+    opacity: 1;
+    transition: 0.4s ease-in-out;
+    transform: translateY(-150%);
+  }
+
+  .home .formHomeBtn:hover p {
+    opacity:1;
+    transition: 0.4s ease-in-out;
+    transform: translateY(-100%);
+  }

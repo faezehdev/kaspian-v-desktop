@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,26 @@
 </head>
 
 <body>
+    <div class="loading duration-1000 fixed flex items-center justify-center inset-0 w-svw h-svh bg-gray z-[1000000]">
+        <div class="imgS h-full w-full">
+            <img class="w-full h-full object-cover" src="images/loaderPattern.png" alt="loader">
+        </div>
+
+        <div class="overLay absolute">
+            <div class="inVideo">
+                <video src="http://h101i114.undertest.ir/images/logomotion.mp4" muted loop autoplay class="mb-7 w-[150px]"></video>
+            </div>
+            <div id="loader" class=" text-center">
+                <div class="barB bg-gray">
+                    
+                    <div id="bar" class="bg-nWhite origin-left h-[5px]"></div>
+                </div>
+                <span id="percent" class="faNum text-nWhite mt-2.5 text-base block"></span>
+              </div>
+        </div>
+    </div>
     <div class="home bg-darkGray">
+        <basis core="call" file="header.inc" />
         <div class="section1 overflow-hidden relative">
             <div class="sliderContainer">
                 <div id="js-cta-slider" class="cta__slider-wrapper swiper-container homeSlider relative">
@@ -201,12 +220,14 @@
                 </div>
             </div>
         </div>
+
+        <basis core="call" file="footer.inc" />
     </div>
 
     <script src="js/jQuery.js"></script>
     <script src="js/swiper4.7.js"></script>
     <script src="js/TweenMax.min.js"></script>
-
+    <script src="js/imageLoaded.js"></script>
     <script src="js/playVideo.js"></script>
     <script src="js/home.js"></script>
 </body>
