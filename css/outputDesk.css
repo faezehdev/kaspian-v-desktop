@@ -800,6 +800,10 @@ video {
   margin-left: 3%;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .mr-\[1\.5em\] {
   margin-right: 1.5em;
 }
@@ -854,22 +858,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mb-\[1\.5em\] {
-  margin-bottom: 1.5em;
-}
-
-.mb-\[3em\] {
-  margin-bottom: 3em;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.mt-\[2\.5em\] {
-  margin-top: 2.5em;
 }
 
 .box-border {
@@ -1118,10 +1106,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[54\%\] {
-  width: 54%;
 }
 
 .max-w-fit {
@@ -2431,10 +2415,6 @@ video {
   padding-top: 8em;
 }
 
-.pb-\[\.5em\] {
-  padding-bottom: .5em;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2499,6 +2479,11 @@ video {
   font-family: IRANSansWeb500, IRANSansWeb500;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-\[10px\] {
   font-size: 10px;
 }
@@ -2525,15 +2510,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-\[28px\] {
-  font-size: 28px;
 }
 
 .font-bold {
@@ -2644,6 +2620,10 @@ video {
   line-height: 25.04px;
 }
 
+.leading-28 {
+  line-height: 28px;
+}
+
 .leading-3 {
   line-height: .75rem;
 }
@@ -2654,6 +2634,10 @@ video {
 
 .leading-31\.03 {
   line-height: 31.03px;
+}
+
+.leading-35 {
+  line-height: 35px;
 }
 
 .leading-40\.96 {
@@ -2670,22 +2654,6 @@ video {
 
 .leading-\[46\.96px\] {
   line-height: 46.96px;
-}
-
-.leading-28 {
-  line-height: 28px;
-}
-
-.leading-35 {
-  line-height: 35px;
-}
-
-.leading-\[31\.38px\] {
-  line-height: 31.38px;
-}
-
-.leading-\[37\.66px\] {
-  line-height: 37.66px;
 }
 
 .\!text-White1 {
@@ -3079,10 +3047,6 @@ video {
   transition-duration: 1s;
 }
 
-.duration-\[\.4s\] {
-  transition-duration: .4s;
-}
-
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -3219,6 +3183,26 @@ video {
 
 .faNum{
   font-family: "IRANSansWeb300";
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
 
 * {
@@ -3795,16 +3779,6 @@ header .label-up{
   top: 0px;
 }
 
-.before\:bottom-0::before {
-  content: var(--tw-content);
-  bottom: 0px;
-}
-
-.before\:right-0::before {
-  content: var(--tw-content);
-  right: 0px;
-}
-
 .before\:z-\[-1\]::before {
   content: var(--tw-content);
   z-index: -1;
@@ -3820,11 +3794,6 @@ header .label-up{
   height: 0px;
 }
 
-.before\:h-\[1px\]::before {
-  content: var(--tw-content);
-  height: 1px;
-}
-
 .before\:w-full::before {
   content: var(--tw-content);
   width: 100%;
@@ -3838,11 +3807,6 @@ header .label-up{
 .before\:duration-150::before {
   content: var(--tw-content);
   transition-duration: 150ms;
-}
-
-.before\:duration-\[\.4s\]::before {
-  content: var(--tw-content);
-  transition-duration: .4s;
 }
 
 .before\:ease-out::before {
