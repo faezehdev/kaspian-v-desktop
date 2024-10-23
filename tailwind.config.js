@@ -35,7 +35,16 @@ module.exports = {
       'darkov':'#0E0E0ED9',
        'darkgray' :'#252525',
        'dark1':'#0E0E0E',
-       'black1':'#131313'
+       'black1':'#131313',
+      'nblack':'#0E0E0E',
+      'txtblack':'#131313',
+      'nWhite':'#F8F8F8',
+
+      'darkGray':'#252525',
+      'Gray':'#6E6E6E',
+      'transparent':'#25252500',
+      
+        
     },
 
     fontFamily: {
@@ -97,6 +106,7 @@ module.exports = {
         '80p':'80%',
         '95p':'95%',
 
+        '95p':'95%',
       },
       maxWidth: {
         'x100': '100%',

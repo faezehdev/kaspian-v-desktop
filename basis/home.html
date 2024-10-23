@@ -1,0 +1,308 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362802">
+    <member name="def-content" type="view" />
+    <member name="def-content250" type="view" postsql="select * from [db.def-content250] where TypeID=250" />
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362802">
+    <member name="def-gallery" type="list" format="4" />
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362802">
+    <member name="def-video" type="list" format="3" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9643"> <member name="contactus" type="view"/> </basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بازرگانی کاسپین</title>
+
+    <meta name="description" content="صفحه اصلی بازرگانی کاسپین" />
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper4.1.6.css" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css" />
+</head>
+
+<body>
+    <div class="loading duration-1000 fixed flex items-center justify-center inset-0 w-svw h-svh bg-gray z-[1000000]">
+        <div class="imgS h-full w-full">
+            <img class="w-full h-full object-cover" src="images/loaderPattern.png" alt="loader" />
+        </div>
+
+        <div class="overLay absolute">
+            <div class="inVideo">
+                <video src="[##cms.cms.cdn##]/images/logomotion.mp4" muted loop autoplay
+                    class="mb-7 w-[150px]"></video>
+            </div>
+            <div id="loader" class="text-center">
+                <div class="barB bg-gray">
+                    <div id="bar" class="bg-nWhite origin-left h-[5px]"></div>
+                </div>
+                <span id="percent" class="faNum text-nWhite mt-2.5 text-base block"></span>
+            </div>
+        </div>
+    </div>
+    <div class="home bg-darkGray">
+        <basis core="call" file="header.inc" />
+        <div class="section1 overflow-hidden relative">
+            <div class="sliderContainer">
+                <div id="js-cta-slider" class="cta__slider-wrapper swiper-container homeSlider relative">
+                    <div class="swiper-wrapper cta__slider">
+                        <!-- SLIDER ITEM -->
+                        <div class="cta__slider-item swiper-slide slider1">
+                            <div class="slide-inner w-svw h-svh relative flex items-center justify-center">
+                                <div
+                                    class="imgS h-svh w-svw overflow-hidden relative after:absolute after:w-full after:h-full after:inset-0">
+                                    <basis core="print" datamembername="db.def-gallery">
+                                        <face filter="ord=1">
+                                            <img class="w-full h-full object-cover scale-125" src="/@largeIMG"
+                                                alt="@name" />
+                                        </face>
+                                    </basis>
+                                </div>
+                                <div class="overTitle absolute" dir="rtl">
+                                    <basis core="print" datamembername="db.def-content">
+                                        <face filter="TypeID=128">
+                                            <h1 class="font-IRANSansWeb500 text-3xl text-White text-center mb-2">
+                                                @Answer
+                                            </h1>
+                                        </face>
+                                    </basis>
+                                    <div class="para text-center font-IRANSansWeb400 text-base text-White mb-5">
+                                        <basis core="print" datamembername="db.def-content">
+                                            <face filter="TypeID=129"> @Answer </face>
+                                        </basis>
+                                    </div>
+                                    <a class="flex w-fit mx-auto formHomeBtn items-center justify-between py-2 gap-x-2.5 px-4 rounded-[20px] bg-darkGray border border-Gray relative overflow-hidden"
+                                        href="/محصولات">
+                                        <div class="relative">
+                                            <span class="text-nWhite whitespace-nowrap">
+                                                محصولات
+                                            </span>
+
+                                            <p class="text-nWhite whitespace-nowrap">محصولات</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="goDown nextMainBtn">
+                                <div class="goIcon">
+                                    <div class="arrowContainer">
+                                        <span class="maskArrow">
+                                            <span></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER ITEM -->
+
+                        <!-- SLIDER ITEM -->
+                        <div class="cta__slider-item swiper-slide slider2">
+                            <div class="slide-inner h-svh w-svw relative flex items-center justify-center">
+                                <div
+                                    class="imgS h-svh w-svw overflow-hidden relative after:absolute after:w-full after:h-full after:inset-0">
+                                    <basis core="print" datamembername="db.def-gallery">
+                                        <face filter="ord=2">
+                                            <img class="w-full object-cover h-full" src="@largeIMG" alt="@name" />
+                                        </face>
+                                    </basis>
+                                </div>
+                                <div class="overTitle absolute max-w-[638px]" dir="rtl">
+                                    <basis core="print" datamembername="db.def-content250">
+                                        <face filter="RowNumber=1">
+                                            <h2 class="font-IRANSansWeb500 text-xl text-White text-center mb-2">
+                                                @text
+                                            </h2>
+                                            <div class="para text-center font-IRANSansWeb400 text-base text-White mb-5">
+                                                @largetext
+                                            </div>
+                                        </face>
+                                    </basis>
+
+                                    <a title="درباره‌ما"
+                                        class="flex w-fit mx-auto formHomeBtn items-center justify-between py-2 gap-x-2.5 px-4 rounded-[20px] bg-darkGray border border-Gray relative overflow-hidden"
+                                        href="/درباره-ما">
+                                        <div class="relative">
+                                            <span class="text-nWhite whitespace-nowrap">
+                                                بیشتر درباره‌ی ما
+                                            </span>
+
+                                            <p class="text-nWhite whitespace-nowrap">
+                                                بیشتر درباره‌ی ما
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="goDown nextMainBtn">
+                                <div class="goIcon">
+                                    <div class="arrowContainer">
+                                        <span class="maskArrow">
+                                            <span></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER ITEM -->
+
+                        <!-- SLIDER ITEM -->
+                        <div class="cta__slider-item swiper-slide slider3">
+                            <div class="slide-inner h-svh w-svw relative flex items-center justify-center">
+                                <div
+                                    class="imgS h-svh w-svw overflow-hidden relative after:absolute after:w-full after:h-full after:inset-0">
+                                    <basis core="print" datamembername="db.def-gallery">
+                                        <face filter="ord=3">
+                                            <img class="w-full h-full object-cover" src="@largeIMG" alt="@name" />
+                                        </face>
+                                    </basis>
+                                </div>
+
+                                <div class="overTitle absolute max-w-[638px]" dir="rtl">
+                                    <basis core="print" datamembername="db.def-content250">
+                                        <face filter="RowNumber=2">
+                                            <h3 class="font-IRANSansWeb500 text-xl text-White text-center mb-2">
+                                                @text
+                                            </h3>
+                                            <div class="para text-center font-IRANSansWeb400 text-base text-White mb-5">
+                                                @largetext
+                                            </div>
+                                        </face>
+                                    </basis>
+
+                                    <a class="flex w-fit mx-auto formHomeBtn items-center justify-between py-2 gap-x-2.5 px-4 rounded-[20px] bg-darkGray border border-Gray relative overflow-hidden"
+                                        href="/محصولات">
+                                        <div class="relative">
+                                            <span class="text-nWhite whitespace-nowrap">
+                                                همه‌ی محصولات
+                                            </span>
+
+                                            <p class="text-nWhite whitespace-nowrap">
+                                                همه‌ی محصولات
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="goDown nextMainBtn">
+                                <div class="goIcon">
+                                    <div class="arrowContainer">
+                                        <span class="maskArrow">
+                                            <span></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER ITEM -->
+                        <!-- SLIDER ITEM -->
+                        <div class="cta__slider-item swiper-slide slider4">
+                            <div class="slide-inner">
+                                <div class="innerVideo relative flex items-center justify-center">
+                                    <basis core="print" datamembername="db.def-video">
+                                        <face filter="ord=1000">
+                                            <video class="brightness-75" loop playsinline autoplay muted>
+                                                <source src="/@largeIMG" />
+                                            </video>
+                                        </face>
+                                    </basis>
+                                    <div class="absolute">
+                                        <div class="playbtn cursor-pointer flex flex-col items-center">
+                                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="1" y="1" width="54" height="54" rx="27" stroke="#F8F8F8"
+                                                    stroke-width="2" />
+                                                <path
+                                                    d="M41.0456 26.1337C42.3182 27.0215 42.3181 28.9785 41.0455 29.8663L21.3323 43.6195C19.9079 44.6133 18 43.5447 18 41.7532L18 14.2468C18 12.4553 19.9079 11.3867 21.3323 12.3805L41.0456 26.1337Z"
+                                                    stroke="#F8F8F8" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <div class="para font-IRANSansWeb500 text-base text-White mt-4 text-center">
+                                            <a href="/مطالب-آموزشی"> نمایش تیزر معرفی محصول </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="goDown scroll-down">
+                                <div class="goIcon">
+                                    <div class="arrowContainer">
+                                        <span class="maskArrow">
+                                            <span></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SLIDER ITEM -->
+                    </div>
+                    <div class="whatsappIcon group duration-500 hover:w-[94px] h-[35px] w-[35px] absolute rounded-full flex items-center justify-end pr-[15px] bg-darkGray border border-Gray hover:border-White cursor-pointer right-[5%] bottom-7 z-1">
+                        <basis core="print" datamembername="db.contactus">
+                           
+                            <face filter="text='واتس اپ'">
+                                <a href="https://wa.me/@largetext" title=" واتس‌آپ">
+                                    <div class="inner relative gap-x-2 flex items-center">
+                                        <span
+                                            class="font-IRANSansWeb400 absolute text-sm text-White opacity-0 group-hover:opacity-100 group-hover:duration-500 group-hover:relative right-2.5">
+                                            واتس‌آپ
+                                        </span>
+                                        <svg width="3" height="12" viewBox="0 0 3 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M1.503 1.964C1.215 1.964 0.980333 1.87867 0.799 1.708C0.628333 1.52667 0.543 1.292 0.543 1.004C0.543 0.716 0.628333 0.486666 0.799 0.315999C0.980333 0.134666 1.215 0.0439997 1.503 0.0439997C1.791 0.0439997 2.02033 0.134666 2.191 0.315999C2.37233 0.486666 2.463 0.716 2.463 1.004C2.463 1.292 2.37233 1.52667 2.191 1.708C2.02033 1.87867 1.791 1.964 1.503 1.964ZM2.143 3.5L2.143 11.5H0.863L0.863 3.5H2.143Z"
+                                                fill="#F8F8F8" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                
+                            </face>
+                        </basis>
+                    </div>
+                    <div class="innerSlider1Pagination gap-x-2.5 absolute !bottom-7 !left-[5%] z-1 flex justify-end items-center"
+                        style="right: unset; top: unset"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section2 relative flex items-center justify-center">
+            <div class="imgS flex items-center justify-end w-full overflow-hidden">
+                <img class="w-80p" src="images/pattern_mask.png" alt="" />
+            </div>
+            <div class="overItems absolute" dir="rtl">
+                <h5 class="text-nWhite mb-2 text-center font-IRANSansWeb500 text-xl">
+                    ارتباط با ما
+                </h5>
+                <div class="para max-w-[600px] text-nWhite text-base font-IRANSansWeb400 text-center">
+                    <p>
+                        برای خرید محصولات و یا دریافت مشاوره و راهنمایی از طریق فرم زیر با
+                        ما تماس بگیرید تا در اسرع وقت به درخواست شما پاسخ دهیم.
+                    </p>
+                </div>
+                <a class="flex w-fit mx-auto formHomeBtn items-center justify-between py-2 gap-x-2.5 px-4 rounded-[20px] bg-darkGray border border-Gray relative overflow-hidden"
+                    href="/فرم-تماس-با-ما">
+                    <div class="relative">
+                        <span class="text-nWhite whitespace-nowrap">
+                            فرم تماس با ما
+                        </span>
+
+                        <p class="text-nWhite whitespace-nowrap">فرم تماس با ما</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <basis core="call" file="footer.inc" />
+    </div>
+
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/_js/swiper4.7.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/TweenMax.min.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/imageLoaded.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/playVideo.js"></script>
+    <script src="[##cms.cms.cdn##]/js/home.js"></script>
+</body>
+
+</html>
