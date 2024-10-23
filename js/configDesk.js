@@ -4,17 +4,26 @@ let hoverItems = document.querySelectorAll('.hover-item')
 let Menus = [...document.querySelectorAll('.menus')]
 let IsDark = false
 hoverItems.forEach(item=>{
+
     item.addEventListener('mouseenter',(e)=>{
-        header.classList.add('showBG')
-        let id =e.currentTarget.getAttribute('id')
-        let menu
         if(header.classList.contains('dark')){
             IsDark = true
+            console.log('has darkk',IsDark);
             header.classList.remove('dark')
+            header.classList.add('hoverdDark')
+        }
+        if(header.classList.contains('hoverdDark')){
+            IsDark = true
+            console.log('has darkk 2',IsDark);
         }
         else{
             IsDark = false
+            console.log('has not darkk 2',IsDark);
         }
+        header.classList.add('showBG')
+        let id =e.currentTarget.getAttribute('id')
+        let menu
+        header.classList.remove('dark')
         switch(id){
             case 'product':{
                 menu = Menus.filter(m=>{
@@ -45,12 +54,16 @@ e.currentTarget.classList.remove('showC')
 setTimeout(() => {
     header.classList.remove('showBG')
 },500);
-
 if(IsDark){
+    console.log('leave ,header has dark');
     header.classList.add('dark')
+    header.classList.remove('hoverdDark')
+    IsDark = true
 }
 else{
+    console.log('leave ,header has not dark');
     header.classList.remove('dark')
+    IsDark = false
 }
 })
 let elements = document.querySelectorAll('.course-link');
