@@ -84,16 +84,14 @@
                         <ul class="relative after:h-[100%] overflow-hidden after:absolute after:w-px after:bg-White after:top-[13px] after:z-0 after:right-[75px]">
                           <basis core="print" datamembername="db.history">
                           
-                              <face>
+                              <face filter="TypeID=250">
                                   <li class="flex pb-12 last:pb-0 items-baseline ">
                                       <span class="font-IRANSansWeb500 text-xl text-nWhite w-[40px]">
-                                          ۱۴۰۳
+                                          @text
                                       </span>
                                       <i class="border bg-darkGray shrink-0 z-2 mr-7 rounded-full border-nWhite w-[14px] h-[14px] after:absolute after:w-[6px] after:h-[6px] after:rounded-full after:bg-Gray flex items-center justify-center before:absolute before:top-0 before:bg-nWhite"></i>
                                       <div class="para relative pr-16 font-IRANSansWeb500 text-base text-nWhite ">
-                                          <p>
-                                              یک اتفاق یا رویداد مهم در تاریخچه‌ی مجموعه
-                                          </p>
+                                          @largetext
                                       </div>
                                   </li>
                                   
@@ -107,7 +105,13 @@
                 </div>
                 <div class="lSide w-[46%]">
                     <div class="imgS relative after:absolute after:inset-0 after:w-full after:h-full after:bg-gradient-to-l after:from-darkGray after:to-[#25252500]">
-                        <img class="h-full object-cover" src="images/ریل1.png" alt="درباره‌ی ما">
+                        <basis core="print" datamembername="db.historyGallery">
+                      
+                            <face filter="ord=1000">
+                                <img class="h-full object-cover" src="/@largeIMG" alt="درباره‌ی ما">
+                                
+                            </face>
+                        </basis>
                     </div>
                 </div>
           
@@ -119,27 +123,18 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="imgS relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-[#0E0E0E00] after:to-[#0E0E0E00]">
-                        <img class="w-full" src="images/image_landing2.png" alt="@name">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="imgS relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-[#0E0E0E00] after:to-[#0E0E0E00]">
-                        <img class="w-full" src="images/image_landing2.png" alt="@name">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="imgS relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-[#0E0E0E00] after:to-[#0E0E0E00]">
-                        <img class="w-full" src="images/image_landing2.png" alt="@name">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="imgS relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-[#0E0E0E00] after:to-[#0E0E0E00]">
-                        <img class="w-full" src="images/image_landing2.png" alt="@name">
-                    </div>
-                  </div>
-               
+                   <basis core="print" datamembername="db.aboutGallery">
+                    
+                       <face filter="ord=1000">
+                           <div class="swiper-slide">
+                             <div class="imgS relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-[#0E0E0E00] after:to-[#0E0E0E00]">
+                                 <img class="w-full" src="/@largeIMG" alt="@name">
+                             </div>
+                           </div>
+                           
+                       </face>
+                   </basis>
+                 
                 </div>
             
                     <div class="nextGallery absolute cursor-pointer left-[2.5%] top-[50%] z-1">
@@ -164,7 +159,13 @@
             <div class="inner flex items-center gap-x-20 justify-between">
                     <div class="rSide w-[46%]">
                         <div class="imgS relative after:absolute after:inset-0 after:w-full after:h-full after:bg-gradient-to-r after:from-darkGray after:to-[#25252500]">
-                            <img class="h-full object-cover" src="images/ریل1.png" alt="درباره‌ی ما">
+                          <basis core="print" datamembername="db.aboutGallery">
+                           
+                              <face filter="ord=3">
+                                  <img class="h-full object-cover" src="/@largeIMG" alt="درباره‌ی ما">
+                                  
+                              </face>
+                          </basis>
                         </div>
                     </div>
 
