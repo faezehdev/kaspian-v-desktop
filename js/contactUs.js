@@ -1,3 +1,5 @@
+let lastIndex = 0;
+let inner2 = document.querySelector(".inner2 .rSide")
 const mainSlider = new Swiper('.mainSlider', {
     // Optional parameters
     loop: false,
@@ -6,6 +8,19 @@ const mainSlider = new Swiper('.mainSlider', {
     mousewheel: {
         invert: false,
       },
+
+      on:{
+        transitionStart: function(swiper){
+          $(".inner2 .rSide").removeClass("prevActive")
+          $(".inner2 .rSide").removeClass("nextActive")
+          if (this.activeIndex==0) {
+            inner2.classList.add("prevActive")
+          }
+          else{
+            inner2.classList.add("nextActive")
+          }
+        },
+      }
   });
 
 
