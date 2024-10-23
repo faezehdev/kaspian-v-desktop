@@ -1,112 +1,269 @@
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2363317"> 
-    <member name="title" type="view"/> 
+<header class="site-header js-site-header">
+
+    <a href="/" class="site-header__logo">
+        <img style="width:130px;filter: grayscale(0);" src="images/logo.png" />
+    </a>
+
+    <div class="site-header__menu" data-cursor>
+        <button class="site-header__menu-btn | js-menu-btn btn-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+</header>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="209182">
+    <member name="bestSale" type="list"/>
 </basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2363317"> 
-    <member name="pdf" type="list" format="pdf"/> 
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="210503"> 
-    <member name="proList" type="list" perpage="200" /> 
-</basis>
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کاتالوگ</title>
-    <meta name="description" content="کاتالوگ">
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper.css">
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
-</head>
-<body>
-    <main class="Catalogue-C bg-White1" dir="rtl">
-        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
-        <div class="catalogues-Container w-full flex flex-col gap-5 pt-[8em] min-h-[80vh]">
-            <div class="Title w-95p mx-auto flex flex-col justify-start items-center gap-3">
-                <basis core="print" datamembername="db.title">
-                    <layout>
-                        @child
-                    </layout>
-                    <face filter="TypeID=150">
-                        <h1 class="font-IRANSansWeb500 font-medium text-[30px] leading-[46.96px] text-black1 text-center">
-                            @Answer
-                        </h1>
-                    </face>
-                </basis>
-                <basis core="print" datamembername="db.title">
-                    <layout>
-                        @child
-                    </layout>
-                    <face filter="TypeID=129">
-                <p class="font-IRANSansWeb400 font-normal text-base leading-25.04 text-black1 text-center">
-                    @Answer
-                </p>
-                    </face>
-                </basis>
+<nav class="site-nav">
+    <ul class="js-site-nav-menu">
+        <li>
+            <a href="/product-cat.bc?catid=201460" class="js-site-nav-item js-site-link"> محصولات</a>
+        </li>
+        <li>
+            <a href="/about-us.bc" class="js-site-nav-item js-site-link"> درباره ما </a>
+        </li>
+        <li>
+            <a href="/contact-us.bc" class="js-site-nav-item js-site-link"> تماس با ما </a>
+        </li>
+        <li>
+            <a href="/blog.bc?catid=209156" class="js-site-nav-item js-site-link">
+                بلاگ
+            </a>
+        </li>
+  <li>
+            <a href="/project-list.bc?catid=201817" class="js-site-nav-item js-site-link">
+                تایید پزشکان
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<aside class="nav js-menu">
+    <div class="nav__outer oh | js-menu-inner">
+        <div class="nav__inner">
+
+            <basis core="dbsource" source="basiscore" mid="20" name="menu" lid="1">
+                <member name="product" type="tree" request="cat" parentid="201460" />
+            </basis>
+            <basis core="dbsource" source="basiscore" mid="20" name="menu" lid="1">
+                <member name="product2" type="tree" request="cat" parentid="201839" />
+            </basis>
+
+            <div class="navlist pdi-top-nav nav-company nav-company_10">
+                <div class="navlist__line"></div>
+                <nav class="db js-nav">
+
+
+
+
+
+                    <ul>
+
+
+
+                    </ul>
+                </nav>
             </div>
-            <div class="catalogues w-95p mx-auto flex flex-col mt-[2em] mb-[5em]
-             justify-start items-start  border-t-[1px] border-gray">
-             <basis core="print" datamembername="db.pdf">
-                 <layout>
-                     @child
-                 </layout>
-                 <face>
-                    <div class="catalogue w-full flex justify-between items-center py-[2em] border-b-[1px] border-gray">
-                        <a href="@largeIMG" download="" alt="@name" title="@name" class="catalogue-name mr-[3%] w-auto flex justify-start items-start">
-                            <h2 class="font-IRANSansWeb500 font-medium text-xl leading-31.03 text-black1">
-                                @name
-                            </h2>
-                        </a>
-                        <a  href="@largeIMG" download="" alt="@name" title="@name" class="catalogue-download ml-[3%] w-auto flex justify-start items-start">
-                            <span class="Circle w-[64px] h-[64px] flex border-y-gray rounded-full
-                             justify-center items-center border-[1px] border-x-gray">
-                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 19.4234V23.2857C1 23.7404 1.18061 24.1764 1.5021 24.4979C1.82359 24.8194 2.25963 25 2.71429 25H23.2857C23.7404 25 24.1764 24.8194 24.4979 24.4979C24.8194 24.1764 25 23.7404 25 23.2857V19.4234M13 16V1M7 11.5L13 17.5L19 11.5" stroke="#252525" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    
-                            </span>
-                        </a>
-                    </div>
-                 </face>
-             </basis>
-             <basis core="repeater" name="rep" datamembername="db.proList">
-                <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##rep.current.id##]"> 
-                <member name="pdfinner" type="list" format="pdf"/> 
-            </basis>
-            <basis core="print" datamembername="db.pdfinner">
-                <layout>
-                    @child
-                </layout>
-                <face>
-                   <div class="catalogue w-full flex justify-between items-center py-[2em] border-b-[1px] border-gray">
-                       <a href="@largeIMG" download="" alt="@name" title="@name" class="catalogue-name 
-                       mr-[3%] w-auto flex justify-start items-start">
-                           <h2 class="font-IRANSansWeb500 font-medium text-xl leading-31.03 text-black1">
-                               @name
-                           </h2>
-                       </a>
-                       <a  href="@largeIMG" download="" alt="@name" title="@name" class="catalogue-download 
-                       ml-[3%] w-auto flex justify-start items-start">
-                           <span class="Circle w-[64px] h-[64px] flex border-y-gray rounded-full
-                            justify-center items-center border-[1px] border-x-gray">
-                               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" 
-                               xmlns="http://www.w3.org/2000/svg">
-                                   <path d="M1 19.4234V23.2857C1 23.7404 1.18061 24.1764 1.5021 24.4979C1.82359 24.8194 2.25963 25 2.71429 25H23.2857C23.7404 25 24.1764 24.8194 24.4979 24.4979C24.8194 24.1764 25 23.7404 25 23.2857V19.4234M13 16V1M7 11.5L13 17.5L19 11.5" stroke="#252525" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                   </svg>
-                                   
-                           </span>
-                       </a>
-                   </div>
-                </face>
-            </basis>
-            
-                       </basis>
-         
+
+
+            <div class="navlist pdi-top-nav nav-company nav-company_1">
+                <div class="navlist__line"></div>
+                <nav class="db js-nav">
+                    <basis core="print" datamembername="menu.product">
+                        <face filter="catID in (201808)">
+
+
+                            <p class="mb5 calssh2 mrg-btm-0">
+                                <a href="/product-list.bc?catid=201808">@title</a>
+                            </p>
+                        </face>
+                    </basis>
+
+                    <ul>
+                        <basis core="print" datamembername="menu.product">
+                            <face filter="parentid in (201808)">
+                                <li class="js-nav-item">
+                                    <a href="/product-list.bc?catid=201808">@title</a>
+                                </li>
+                            </face>
+                        </basis>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="navlist pdi-top-nav nav-company nav-company_4">
+                <div class="navlist__line"></div>
+                <nav class="db js-nav">
+                    <basis core="print" datamembername="menu.product">
+                        <face filter="catID in (201812)">
+
+
+                            <p class="mb5 calssh2 mrg-btm-0">
+                                <a href="/product-list.bc?catid=201812">@title</a>
+                            </p>
+                        </face>
+                    </basis>
+
+
+                    <ul>
+                        <basis core="print" datamembername="menu.product">
+                            <face filter="parentid in (201812)">
+                                <li class="js-nav-item">
+                                    <a href="/product-list.bc?catid=201812">@title</a>
+                                </li>
+                            </face>
+                        </basis>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="navlist pdi-top-nav nav-company nav-company_3">
+                <div class="navlist__line"></div>
+                <nav class="db js-nav">
+                    <basis core="print" datamembername="menu.product">
+                        <face filter="catID in (201823)">
+
+
+                            <p class="mb5 calssh2 mrg-btm-0">
+                                <a href="/product-list.bc?catid=201823">@title</a>
+                            </p>
+
+                        </face>
+                    </basis>
+                    <ul>
+                        <basis core="print" datamembername="menu.product">
+                            <face filter="parentid in (201823)">
+                                <li class="js-nav-item">
+                                    <a href="/product-list.bc?catid=201823">@title</a>
+                                </li>
+                            </face>
+                        </basis>
+
+
+                    </ul>
+                </nav>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="navlist pdi-top-nav nav-company nav-company_4">
+                <div class="navlist__line"></div>
+                <nav class="db js-nav">
+
+
+
+                    <p class="mb5 calssh2 mrg-btm-0">
+                        <a href="/">صفحه اصلی</a>
+                    </p>
+
+
+                    <ul>
+
+
+                        <li class="js-nav-item"> <a href="/product-cat.bc?catid=201460">
+                                محصولات</a></li>
+
+   <li class="js-nav-item"> <a href="/about-us.bc">
+                                درباره ما</a></li>
+              <li class="js-nav-item"> <a href="/contact-us.bc">
+                                تماس با ما</a></li>
+   <li class="js-nav-item"> <a href="/blog.bc?catid=209156">
+                                بلاگ</a></li>
+
+                        <li class="js-nav-item"> <a href="/project-list.bc?catid=201817">
+                             تایید پزشکان</a></li>
+                     
+          
+                           <li class="js-nav-item"> <a href="/catalog/catalogue-fartak.pdf" download>
+دانلود کاتالوگ user manual
+</a></li>
+
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="navlist pdi-top-nav nav-company nav-company_4">
+                <div class="navlist__line"></div>
+                <nav class="db js-nav">
+                  
                 
+                
+                            <p class="mb5 calssh2 mrg-btm-0">
+                                <a href="/product-cat.bc?catid=201460">محصولات</a>
+                            </p>
+                
+                  
+                    <ul>
+                        <basis core="print" datamembername="db.bestSale">
+                            <face>
+                                <li class="js-nav-item">
+                                    <a href="/product-cat.bc?catid=@catid">@title</a>
+                                </li>
+                            </face>
+                        </basis>
+                
+                
+                    </ul>
+                </nav>
             </div>
+
+
+
         </div>
-        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
-    </main>
-<basis core="call" file="script.inc" />
-<script src="[##cms.cms.cdn##]/js/catalogue.js"></script> 
-</body>
-</html>
+        <basis core="dbsource" source="basiscore" mid="5" lid="1" name="contact2" usedforid="7">
+            <member name="footer" type="view"></member>
+        </basis>
+        <ul class="social-menu_2">
+
+
+            <li class="js-nav-item ">
+                <basis core="print" datamembername="contact2.footer">
+                    <face filter="text='لینکدین'">
+
+                        <a href="@largetext " target="_blank">
+
+                            <i class="fa fa-linkedin "></i>
+                        </a>
+
+                    </face>
+                </basis>
+                <basis core="print" datamembername="contact2.footer">
+                    <face filter="text='اینستاگرام'">
+
+                        <a href="@largetext" target="_blank">
+
+                            <i class="fa fa-instagram "></i>
+                        </a>
+
+                    </face>
+                </basis>
+                <basis core="print" datamembername="contact2.footer">
+                    <face filter="text='واتس اپ'">
+
+                        <a href="@largetext" target="_blank">
+
+                            <i class="fa fa-whatsapp "></i>
+                        </a>
+
+                    </face>
+                </basis>
+            </li>
+        </ul>
+
+    </div>
+
+</aside>
