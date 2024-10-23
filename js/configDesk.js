@@ -68,3 +68,5 @@ let groupCount = Math.ceil(elements.length / groupSize);
   });
   links.appendChild(groupDiv)
 }
+let wrapp = document.querySelector('.HoverMenu-C')
+scrollbar = Scrollbar.init(wrapp);
