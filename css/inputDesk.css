@@ -353,6 +353,11 @@ header.dark svg path {
 .Product-Show #section-1 .IMG::before {
   content: "";
   position: absolute;
+z-index: 1;
+height: 100%;
+width: 100%;
+background: #0e0e0e69;
+
   z-index: 1;
   height: 100%;
   width: 100%;

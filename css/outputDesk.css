@@ -4001,6 +4001,7 @@ header.dark svg path {
   z-index: 1;
   height: 100%;
   width: 100%;
+  background: #0e0e0e69;
   background: #0e0e0e99;
 }
 
