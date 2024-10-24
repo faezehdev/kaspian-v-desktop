@@ -15,9 +15,11 @@ const mainSlider = new Swiper('.mainSlider', {
           $(".inner2 .rSide").removeClass("nextActive")
           if (this.activeIndex==0) {
             inner2.classList.add("prevActive")
+            document.querySelector("header").classList.remove("dark")
           }
           else{
             inner2.classList.add("nextActive")
+            document.querySelector("header").classList.add("dark")
           }
         },
       }
