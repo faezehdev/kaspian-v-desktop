@@ -40,6 +40,16 @@ const swiper = new Swiper('.swiper-Container', {
     for (let i = 0; i < Slides.length; i++) {
         Slides[i].classList.add('inner-visible')
     }
+    let active = e.slides[0]
+    let Hash =active.querySelector('div.Wrapp').getAttribute('data-index')
+    let all =document.querySelectorAll(`.HoverNav .NItem`)
+    let GoSec = document.querySelector(`.HoverNav [data-index='${Hash}']`)
+    let id = GoSec.getAttribute('data-index')
+    all.forEach(a=>{
+      a.classList.remove('active')
+      a.classList.remove('DarkActive')
+  })
+  GoSec.classList.add('active')
        },
 
     setTransition(e){
