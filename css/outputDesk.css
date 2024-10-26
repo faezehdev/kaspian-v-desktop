@@ -920,6 +920,10 @@ video {
   margin-right: 3%;
 }
 
+.mr-\[5\%\] {
+  margin-right: 5%;
+}
+
 .mr-\[7\%\] {
   margin-right: 7%;
 }
@@ -4074,10 +4078,6 @@ header.dark svg path{
 
 header .label-up{
   margin: 0;
-}
-
-.Error-container img{
-  transform: scale(1.12) translate(5%,3%);
 }
 
 .c02256 {
