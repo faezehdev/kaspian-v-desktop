@@ -1,0 +1,330 @@
+<basis core="dbsource" source="basiscore" mid="19" lid="1" name="list" catid="[##cms.host.Project-aloumatV02##]">
+    <member name="projects" type="list" link="project.bc" size="624x415" typeid="144"
+        postsql=" select *,  SUBSTR(type_144, 1,120-CHARINDEX(' ', REVERSE(SUBSTR(type_144, 1, 120)))) || '...' as substr from [list.projects]" />
+</basis>
+<basis core="dbsource" source="basiscore" mid="11" lid="1" name="db" catid="211225">
+    <member name="customerlist" type="list" link="project.bc" size="596x396" typeid="144"
+        postsql=" select *,  SUBSTR(type_144, 1,120-CHARINDEX(' ', REVERSE(SUBSTR(type_144, 1, 120)))) || '...' as substr from [db.customerlist]" />
+</basis>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+    <basis core="print" datamembername="seo.list">
+        <face>
+            <title>[##cms.seo.title|seo.list.title##]</title>
+            <meta name="description" content="[##cms.seo.description|seo.list.description##]" />
+        </face>
+    </basis>
+    <link href="[##cms.cms.cdn##]/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="[##cms.cms.cdn##]/css/animate.min.css" rel="stylesheet" />
+    <link href="[##cms.cms.cdn##]/css/swiper.min.css" rel="stylesheet" />
+    <link href="[##cms.cms.cdn##]/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/alomV02.css" />
+</head>
+<!-- for seo -->
+<basis core="dbsource" source="basiscore" name="seo" lid="1" request="seo">
+    <member name="list" type="list" request="cat" id="[##cms.query.catid##]" />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="19" name="nav" catid="[##cms.host.Project-aloumatV02##]">
+    <member name="cat" type="tree" request="navcatid" parentid="[##cms.host.Project-aloumatV02##]" />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="19" name="cat" catid="[##cms.host.Project-aloumatV02##]">
+    <member name="name" type="tree" request="navcatid" parentid="[##cms.host.Project-aloumatV02##]"
+        postsql="select * from [cat.name] order by parentcatid desc limit 1" />
+</basis>
+
+<body class="x y nicescroll top-page-none">
+    <basis core="call" file="header.inc"></basis>
+
+    <main class="project-list1-page" data-router-wrapper data-smooth>
+        <article data-router-view="default">
+            <div class="tabGallery" data-smooth-item>
+                <div class="DivtabBlog">
+                    <ul class="bc-content-large tabBlogUl">
+                        <li class="active_tabBlog wow fadeInUp animated" data-wow-delay="3.4s" style="
+                  visibility: visible;
+                  animation-delay: 3.4s;
+                  animation-name: fadeInUp;
+                " data-id="tabPortfolios1"></li>
+
+                        <!-- <li class="wow fadeInUp animated" data-wow-delay="3.6s" style="visibility: visible; animation-delay: 3.6s; animation-name: fadeInUp;" data-id="tabPortfolios2">
+                            مقالات
+                        </li>
+
+                        <li class="wow fadeInUp animated" data-wow-delay="3.8s" style="visibility: visible; animation-delay: 3.8s; animation-name: fadeInUp;" data-id="tabPortfolios3">
+                            اخبار
+                        </li> -->
+                    </ul>
+
+                    <div class="contentTabNmayandeDiv">
+                        <div id="tabPortfolios1" class="in_contentBlog active_tabBlog">
+                            <section class="sliderH project">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                            <basis core="print" datamembername="db.customerlist">
+                                <face>
+                                                <div class="swiper-slide">
+                                                    <!-- <a href="/@link"> -->
+                                                    <div class="img-container">
+                                                        <figure>
+                                                            <img style="opacity: 0.3;" src="/@00596x00396prp" alt="@title" />
+                                                            <figcaption class="div-text-prj wow fadeInUp animated"
+                                                                data-wow-delay=".5s" style="
+                                    visibility: visible;
+                                    animation-delay: 0.5s;
+                                    animation-name: fadeInUp;
+                                  ">
+                                                                <div class="title-verger">
+                                                                    <p>@title</p>
+                                                                    <p class="type144">@substr</p>
+
+                                                                    <div class="clr"></div>
+                                                                </div>
+
+                                                                <div class="clr"></div>
+                                                                <!-- <div class="button df" aria-label="View Contact us">
+                                                                    <span class="arrow">
+                                                                        <svg version="1.1"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                            x="0px" y="0px" width="13.74px"
+                                                                            height="10.29px" viewBox="0 0 13.74 10.29"
+                                                                            style="
+                                          enable-background: new 0 0 13.74 10.29;
+                                        " xml:space="preserve">
+                                                                            <g id="Group_3_Copy_2_1_"
+                                                                                transform="translate(-0.092 -0.015)">
+                                                                                <path id="Fill_1_1_" class="st0"
+                                                                                    d="M0.09,5.92h11.9V4.39H0.09V5.92z">
+                                                                                </path>
+
+                                                                                <path id="Fill_2_1_" class="st0"
+                                                                                    d="M8.69,10.3L7.61,9.23l4.07-4.07L7.61,1.09l1.08-1.08l5.14,5.14L8.69,10.3z">
+                                                                                </path>
+                                                                            </g>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <span class="text"> مشاهده پروژه </span>
+                                                                </div> -->
+                                                            </figcaption>
+                                                        </figure>
+                                                        <div class="clr"></div>
+                                                    </div>
+
+                                                    <div class="clr"></div>
+                                                    <!-- </a> -->
+                                                    <div class="clr"></div>
+                                                </div>
+                                            </face>
+                                        </basis>
+                                    </div>
+
+                                    <div class="swiper-pagination"></div>
+
+                                    <div class="swiper-scrollbar"></div>
+                                    <div class="btn-cnt">
+                                        <div id="js-next1" class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                                <div class="clr"></div>
+                            </section>
+
+                            <div class="clr"></div>
+                        </div>
+
+                        <div class="clr"></div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+
+            <div class="clr"></div>
+
+            <basis core="call" file="footer.inc"></basis>
+        </article>
+    </main>
+
+    <!--<div class="pen z-1 | js-scroll-proxy"></div>-->
+    <div class="overlay fix left top x y bg-dark z6 pen o0 | js-overlay"></div>
+    <div class="pe fix left top x y pen z10 | js-pe"></div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="mask fix left top x y pen z9 pen oh | js-mask">
+        <div class="mask-item abs left top x y mask-item--one oh">
+            <div class="lines fix x y top left bottom right pen dn s:db">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="mask-item abs left top x y mask-item--two oh df aic jcc">
+            <div class="lines fix x y top left bottom right pen dn s:db">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+    <div class="lines fix x y top left bottom right pen dn s:db | js-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="preloader z9 fix x y top left bottom right | js-preloader">
+        <div class="preloader__inner df aic jcc abs x y left top right bottom | js-preloader__inner">
+            <div class="preloader__intro df aic jcc abs x y left top right bottom | js-preloader__intro">
+                <div class="preloader__intro-inner x">
+                    <div class="container">
+                        <p class="h1"></p>
+                        <p class="h1"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="lines fix x y top left bottom right">
+                <div class="line | js-line"></div>
+                <div class="line | js-line"></div>
+                <div class="line | js-line"></div>
+                <div class="line | js-line"></div>
+                <div class="line | js-line"></div>
+            </div>
+        </div>
+    </div>
+    <script src="[##cms.cms.cdn##]/js/app.b1398f0fc55f1a1b3d7f.js"></script>
+    <script src="[##cms.cms.cdn##]/js/vendor.889a51b9f75e44751a41.js"></script>
+
+    <script src="[##cms.cms.cdn##]/js/jquery-3.1.1.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/swiper-bundle.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/jquery.nicescroll.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/wow.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        $(document).ready(function () {
+            var swiper = new Swiper(" .swiper-container", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                },
+                pagination: {
+                    el: " .swiper-pagination",
+                    type: "fraction",
+                },
+
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    draggable: false,
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 5,
+                    },
+                    980: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 5,
+                    },
+                    768: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 5,
+                    },
+                    640: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 5,
+                    },
+                    500: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 5,
+                    },
+                    440: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 5,
+                    },
+                    320: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 5,
+                    },
+                },
+
+                on: {
+                    init: function () {
+                        $(" .swiper-progress-bar").removeClass("animate");
+                        $(" .swiper-progress-bar").removeClass("active");
+                        $(" .swiper-progress-bar").eq(0).addClass("animate");
+                        $(" .swiper-progress-bar").eq(0).addClass("active");
+                    },
+                    slideChangeTransitionStart: function () {
+                        $(" .swiper-progress-bar").removeClass("animate");
+                        $(" .swiper-progress-bar").removeClass("active");
+                        $(" .swiper-progress-bar").eq(0).addClass("active");
+                    },
+                    slideChangeTransitionEnd: function () {
+                        $(" .swiper-progress-bar").eq(0).addClass("animate");
+                    },
+                },
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tabGallery .tabBlogUl li").click(function () {
+                $(this)
+                    .addClass("active_tabBlog")
+                    .siblings("li")
+                    .removeClass("active_tabBlog");
+                target = $(this).data("id");
+                $(".tabGallery .contentTabNmayandeDiv").fadeOut(500, function () {
+                    $("#" + target)
+                        .addClass("active_tabBlog")
+                        .siblings(".in_contentBlog")
+                        .removeClass("active_tabBlog");
+                    $(".contentTabNmayandeDiv").fadeIn(500);
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("html").niceScroll({
+                scrollspeed: 70,
+                mousescrollstep: 38,
+                cursorwidth: 19,
+                cursorborder: 0,
+                cursorcolor: "#797b7e",
+                cursorborderradius: 0,
+                autohidemode: true,
+                horizrailenabled: false,
+                opacity: 1,
+                background: "#212428 ",
+                zindex: "9",
+                autohidemode: false,
+            });
+        });
+
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 200) {
+                $("body").addClass("top-page");
+            } else {
+                $("body").removeClass("top-page");
+            }
+        });
+    </script>
+</body>
+
+</html>

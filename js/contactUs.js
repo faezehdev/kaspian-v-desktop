@@ -15,9 +15,11 @@ const mainSlider = new Swiper('.mainSlider', {
           $(".inner2 .rSide").removeClass("nextActive")
           if (this.activeIndex==0) {
             inner2.classList.add("prevActive")
+            document.querySelector("header").classList.remove("dark")
           }
           else{
             inner2.classList.add("nextActive")
+            document.querySelector("header").classList.add("dark")
           }
         },
       }
@@ -33,12 +35,12 @@ const mainSlider = new Swiper('.mainSlider', {
 
   });
   
-  let mapDiv = document.querySelector(".mapIn");
-  let xLatcontact = mapDiv.getAttribute("data-x");
- let  yLatContact = mapDiv.getAttribute("data-y");
+  let mapDivC = document.querySelector(".mapIn");
+  let xLatcontactC = mapDivC.getAttribute("data-x");
+ let  yLatContactC = mapDivC.getAttribute("data-y");
  
- var map = L.map("map", {
-  center: [yLatContact, xLatcontact], zoom: 15 
+ var mapC = L.map("map", {
+  center: [yLatContactC, xLatcontactC], zoom: 15 
   }
  ),
   Contact = new L.tileLayer(
@@ -48,13 +50,13 @@ const mainSlider = new Swiper('.mainSlider', {
   // '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   minZoom: "10",
   }
-  ).addTo(map);
+  ).addTo(mapC);
  
  
  
   greenIconContact = L.icon({ iconUrl: "images/location.png", iconSize: [24,34] });
-  markerContact = L.marker([yLatContact, xLatcontact], { icon: greenIconContact });
- markerContact.addTo(map);
+  markerContact = L.marker([yLatContactC, xLatcontactC], { icon: greenIconContact });
+ markerContact.addTo(mapC);
  
  
  

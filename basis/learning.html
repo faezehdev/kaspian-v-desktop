@@ -1,13 +1,36 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+    <member request="cat" type="tree" name="productCat" parentid="210503" postsql="select * from [db.productCat] where parentid=210503"/>
+    </basis>
+    <basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" > 
+        <member request="cat" type="tree" name="videoCat" parentid="210516"/> 
+        </basis>
+
+        <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362818">
+            <member name="video" type="list" format="3"/>
+            </basis>
+           
+           
+           <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]">
+            <member name="videoList" type="list" perpage="300" />
+            </basis> 
+           
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/outputDesk.css">
+    <title>آموزش‌ها</title>
+  
+            <meta name="description" content="آموزش‌های بازرگانی کاسپین" />
+      
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
 </head>
 <body>
+
+    <span class="catid" style="display: none;">[##cms.query.catid##]</span>
     <div class="learning bg-nWhite" dir="rtl">
+        <basis core="call" file="header.inc" />
         <div class="title pt-[160px] mb-16 w-95p mx-auto">
             <h1 class="font-IRANSansWeb500 text-3xl text-nblack">
                 مطالب آموزشی
@@ -15,8 +38,9 @@
         </div>
 
         <div class="filters flex justify-between w-95p mx-auto mb-10">
-            <ul class="flex items-stretch gap-x-4">
-                <li class="filterBtn h-[36px] flex duration-700 gap-x-2.5 py-2 rounded-[20px] px-3 items-center border border-Gray cursor-pointer">
+            <ul class="flex items-stretch gap-x-4 flex-wrap" style="row-gap: 1rem;">
+
+                <li data-catid="1" data-learning="/load-learning.inc?type=1&refresh=true" class="filterBtn h-[36px] flex duration-700 gap-x-2.5 py-2 rounded-[20px] px-3 items-center border border-Gray cursor-pointer">
                     <svg class="hidden duration-700" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 0.5L9 8.5M1 8.5L9 0.5" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -25,11 +49,41 @@
                         همه ویدئوها
                     </span>
                 </li>
-             
+
+                <basis core="print" datamembername="db.videoCat">
+                   
+                    <face>
+                        <li data-catid="@catid" data-learning="/load-learning.inc?catid=@catid&type=2&refresh=true" class="filterBtn h-[36px] flex duration-700 gap-x-2.5 py-2 rounded-[20px] px-3 items-center border border-Gray cursor-pointer">
+                            <svg class="hidden duration-700" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.5L9 8.5M1 8.5L9 0.5" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
+                            <span class="font-IRANSansWeb400 duration-700 text-sm text-Gray">
+                            @title
+                            </span>
+                        </li>
+                    </face>
+                </basis>
+              
+
+                <basis core="print" datamembername="db.productCat">
+                
+                    <face>
+                        <li data-catid="@catid" data-learning="/load-learning.inc?catid=@catid&type=3&refresh=true" class="filterBtn h-[36px] flex duration-700 gap-x-2.5 py-2 rounded-[20px] px-3 items-center border border-Gray cursor-pointer">
+                            <svg class="hidden duration-700" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.5L9 8.5M1 8.5L9 0.5" stroke="#252525" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
+                            <span class="font-IRANSansWeb400 duration-700 text-sm text-Gray">
+                            @title
+                            </span>
+                        </li>
+                    </face>
+                </basis>
              
             </ul>
 
-            <div class="formSearch w-[316px]">
+            <div class="formSearch w-[316px] shrink-0">
                 <form action="" class="flex items-center p-2.5 border-b border-b-Gray justify-between gap-x-2">
                     <input class="w-full font-IRANSansWeb400 border-none focus-visible:border-none outline-none text-base text-Gray bg-transparent" type="search" placeholder="عبارت مورد نظر را جست و جو کنید">
                     <button>
@@ -41,27 +95,86 @@
             </div>
         </div>
 
-        <div class="gridContainer w-95p mx-auto pb-16">
-            <div class="grid grid-cols-3 gap-16">
-                <div class="learnBox">
-                    <div class="imgS rounded-[5px] overflow-hidden">
-                        <img src="images/product_image.png" alt="@title">
-                    </div>
-                    <div class="title">
-                        <h2 class="mt-5 mb-2.5 font-IRANSansWeb500 text-base text-nblack">
-                            عنوان مطلب آموزشی
-                        </h2>
-                    </div>
-                    <div class="para font-IRANSansWeb400 text-sm text-nblack">
-                        <p>
-                            توضیحات مطلب آموزشی که باید نوشته شود.
-                        </p>
-                    </div>
-                </div>
+        <div class="gridContainer w-95p mx-auto pb-16 relative">
+            <div class="loadingForm hidden absolute h-[60vh] z-1 w-full justify-center items-center" style="background: rgba(255, 255, 255, 0.3);backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);">
+                <div class="fancy-spinner">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="dot"></div>
+                  </div>
+            </div>
+            <div class="grid learnContainer grid-cols-3 gap-16">
+                <!-- <basis core="print" datamembername="db.video">
+                    
+                    <face>
+                        <div class="learnBox">
+                            <div class="imgS relative flex items-center justify-center rounded-[5px] overflow-hidden">
+                               <video class="w-full h-full object-cover" loop src="/@largeIMG"></video>
+                                <div class="playbtn absolute cursor-pointer">
+                                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1" y="1" width="54" height="54" rx="27" stroke="#F8F8F8" stroke-width="2"/>
+                                        <path d="M41.0456 26.1337C42.3182 27.0215 42.3181 28.9785 41.0455 29.8663L21.3323 43.6195C19.9079 44.6133 18 43.5447 18 41.7532L18 14.2468C18 12.4553 19.9079 11.3867 21.3323 12.3805L41.0456 26.1337Z" stroke="#F8F8F8" stroke-width="2"/>
+                                        </svg>
+                                        
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h2 class="mt-5 mb-2.5 font-IRANSansWeb500 text-base text-nblack">
+                                   @name
+                                </h2>
+                            </div>
+                            <div class="para font-IRANSansWeb400 text-sm text-nblack">
+                                <p>
+                                   @description
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </face>
+                </basis> -->
+                <basis core="repeater" name="rep" datamembername="db.videoList">
+                    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##rep.current.id##]"> 
+                        <member name="productVideo" type="list" format="3"/>
+                     </basis>
+                    
+
+                     <basis core="print" datamembername="db.productVideo">
+                     
+                         <face>
+                            <div class="learnBox">
+                                <div class="imgS relative flex items-center justify-center rounded-[5px] overflow-hidden">
+                                   <video class="w-full h-full object-cover" loop src="/@largeIMG"></video>
+                                    <div class="playbtn absolute cursor-pointer">
+                                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="54" height="54" rx="27" stroke="#F8F8F8" stroke-width="2"/>
+                                            <path d="M41.0456 26.1337C42.3182 27.0215 42.3181 28.9785 41.0455 29.8663L21.3323 43.6195C19.9079 44.6133 18 43.5447 18 41.7532L18 14.2468C18 12.4553 19.9079 11.3867 21.3323 12.3805L41.0456 26.1337Z" stroke="#F8F8F8" stroke-width="2"/>
+                                            </svg>
+                                            
+                                    </div>
+                                </div>
+                                <div class="title">
+                                    <h2 class="mt-5 mb-2.5 font-IRANSansWeb500 text-base text-nblack">
+                                       @name
+                                    </h2>
+                                </div>
+                                <div class="para font-IRANSansWeb400 text-sm text-nblack">
+                                    <p>
+                                       @description
+                                    </p>
+                                </div>
+                            </div>
+                         </face>
+                     </basis>
+                   </basis>
             </div>
         </div>
+
+        <basis core="call" file="footer.inc" />
     </div>
-    <script src="js/jQuery.js"></script>
-    <script src="js/learning.js"></script>
+    <script>
+        document.querySelector("header").classList.add("dark")
+    </script>
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/js/learning.js"></script>
 </body>
 </html>

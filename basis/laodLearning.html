@@ -1,0 +1,244 @@
+<basis core="group" if="[##cms.query.type##]=1">
+
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="210503"> 
+        <member name="videoList" type="list" perpage="300" /> </basis> 
+        <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362818"> 
+            <member name="video" type="list" format="3"/> </basis>
+
+    <basis core="print" datamembername="db.video">
+      
+        <face>
+            <div class="learnBox">
+                <div class="imgS relative flex items-center justify-center rounded-[5px] overflow-hidden">
+                   <video class="w-full h-full object-cover" loop src="/@largeIMG"></video>
+                    <div class="playbtn absolute cursor-pointer">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="54" height="54" rx="27" stroke="#F8F8F8" stroke-width="2"/>
+                            <path d="M41.0456 26.1337C42.3182 27.0215 42.3181 28.9785 41.0455 29.8663L21.3323 43.6195C19.9079 44.6133 18 43.5447 18 41.7532L18 14.2468C18 12.4553 19.9079 11.3867 21.3323 12.3805L41.0456 26.1337Z" stroke="#F8F8F8" stroke-width="2"/>
+                            </svg>
+                            
+                    </div>
+                </div>
+                <div class="title">
+                    <h2 class="mt-5 mb-2.5 font-IRANSansWeb500 text-base text-nblack">
+                       @name
+                    </h2>
+                </div>
+                <div class="para font-IRANSansWeb400 text-sm text-nblack">
+                    <p>
+                       @description
+                    </p>
+                </div>
+            </div>
+            
+        </face>
+    </basis>
+
+    <basis core="repeater" name="rep" datamembername="db.videoList">
+        <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##rep.current.id##]"> 
+            <member name="productVideo" type="list" format="3"/>
+         </basis>
+        
+
+         <basis core="print" datamembername="db.productVideo">
+    
+             <face>
+                <div class="learnBox">
+                    <div class="imgS relative flex items-center justify-center rounded-[5px] overflow-hidden">
+                       <video class="w-full h-full object-cover" loop src="/@largeIMG"></video>
+                        <div class="playbtn absolute cursor-pointer">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="54" height="54" rx="27" stroke="#F8F8F8" stroke-width="2"/>
+                                <path d="M41.0456 26.1337C42.3182 27.0215 42.3181 28.9785 41.0455 29.8663L21.3323 43.6195C19.9079 44.6133 18 43.5447 18 41.7532L18 14.2468C18 12.4553 19.9079 11.3867 21.3323 12.3805L41.0456 26.1337Z" stroke="#F8F8F8" stroke-width="2"/>
+                                </svg>
+                                
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h2 class="mt-5 mb-2.5 font-IRANSansWeb500 text-base text-nblack">
+                           @name
+                        </h2>
+                    </div>
+                    <div class="para font-IRANSansWeb400 text-sm text-nblack">
+                        <p>
+                           @description
+                        </p>
+                    </div>
+                </div>
+
+             </face>
+         </basis>
+       </basis>
+</basis>
+
+
+<basis core="group" if="[##cms.query.type##]=2">
+    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362818">
+         <member name="video" type="list" format="3"/> 
+        </basis>
+
+    <basis core="print" datamembername="db.video">
+                     <else-layout>
+                            <div class="para font-IRANSansWeb400 text-base text-txtblack" dir="rtl">
+                                <p>
+                                    متاسفانه ویدیویی موجود نیست.
+                                </p>
+                            </div>
+                        </else-layout>
+        <face>
+            <div class="learnBox">
+                <div class="imgS relative flex items-center justify-center rounded-[5px] overflow-hidden">
+                   <video class="w-full h-full object-cover" loop src="/@largeIMG"></video>
+                    <div class="playbtn absolute cursor-pointer">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="54" height="54" rx="27" stroke="#F8F8F8" stroke-width="2"/>
+                            <path d="M41.0456 26.1337C42.3182 27.0215 42.3181 28.9785 41.0455 29.8663L21.3323 43.6195C19.9079 44.6133 18 43.5447 18 41.7532L18 14.2468C18 12.4553 19.9079 11.3867 21.3323 12.3805L41.0456 26.1337Z" stroke="#F8F8F8" stroke-width="2"/>
+                            </svg>
+                            
+                    </div>
+                </div>
+                <div class="title">
+                    <h2 class="mt-5 mb-2.5 font-IRANSansWeb500 text-base text-nblack">
+                       @name
+                    </h2>
+                </div>
+                <div class="para font-IRANSansWeb400 text-sm text-nblack">
+                    <p>
+                       @description
+                    </p>
+                </div>
+            </div>
+            
+        </face>
+    </basis>
+
+</basis>
+
+<basis core="group" if="[##cms.query.type##]=3">
+
+    
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]">
+    <member name="videoList" type="list" perpage="300" />
+    </basis> 
+   
+    <basis core="repeater" name="rep" datamembername="db.videoList">
+        <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##rep.current.id##]"> 
+            <member name="productVideo" type="list" format="3"/>
+         </basis>
+        
+
+         <basis core="group" if="[##db.videoList##] = ''">
+                <div class="para font-IRANSansWeb400 text-base text-txtblack" dir="rtl">
+                    <p>
+                        متاسفانه ویدیویی موجود نیست.
+                    </p>
+                </div>
+         </basis>
+
+         <basis core="print" datamembername="db.productVideo">
+          
+             <face>
+                <div class="learnBox">
+                    <div class="imgS relative flex items-center justify-center rounded-[5px] overflow-hidden">
+                       <video class="w-full h-full object-cover" loop src="/@largeIMG"></video>
+                        <div class="playbtn absolute cursor-pointer">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="54" height="54" rx="27" stroke="#F8F8F8" stroke-width="2"/>
+                                <path d="M41.0456 26.1337C42.3182 27.0215 42.3181 28.9785 41.0455 29.8663L21.3323 43.6195C19.9079 44.6133 18 43.5447 18 41.7532L18 14.2468C18 12.4553 19.9079 11.3867 21.3323 12.3805L41.0456 26.1337Z" stroke="#F8F8F8" stroke-width="2"/>
+                                </svg>
+                                
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h2 class="mt-5 mb-2.5 font-IRANSansWeb500 text-base text-nblack">
+                           @name
+                        </h2>
+                    </div>
+                    <div class="para font-IRANSansWeb400 text-sm text-nblack">
+                        <p>
+                           @description
+                        </p>
+                    </div>
+                </div>
+             </face>
+         </basis>
+       </basis>
+</basis>
+
+<basis core="group" if="[##cms.query.type##]=4">
+
+
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="210503"> 
+        <member name="videoList" type="list" perpage="300" /> </basis> 
+        
+        <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362818"> 
+            <member name="video" type="list" format="3" postsql="select * from [db.video] where name like '%[##cms.query.q##]%'"/> 
+        </basis>
+
+    <basis core="print" datamembername="db.video">
+      
+        <face>
+            <div class="learnBox">
+                <div class="imgS relative flex items-center justify-center rounded-[5px] overflow-hidden">
+                   <video class="w-full h-full object-cover" loop src="/@largeIMG"></video>
+                    <div class="playbtn absolute cursor-pointer">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="54" height="54" rx="27" stroke="#F8F8F8" stroke-width="2"/>
+                            <path d="M41.0456 26.1337C42.3182 27.0215 42.3181 28.9785 41.0455 29.8663L21.3323 43.6195C19.9079 44.6133 18 43.5447 18 41.7532L18 14.2468C18 12.4553 19.9079 11.3867 21.3323 12.3805L41.0456 26.1337Z" stroke="#F8F8F8" stroke-width="2"/>
+                            </svg>
+                            
+                    </div>
+                </div>
+                <div class="title">
+                    <h2 class="mt-5 mb-2.5 font-IRANSansWeb500 text-base text-nblack">
+                       @name
+                    </h2>
+                </div>
+                <div class="para font-IRANSansWeb400 text-sm text-nblack">
+                    <p>
+                       @description
+                    </p>
+                </div>
+            </div>
+            
+        </face>
+    </basis>
+
+    <basis core="repeater" name="rep" datamembername="db.videoList">
+        <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##rep.current.id##]"> 
+            <member name="productVideo" type="list" format="3" postsql=" select * from [db.productVideo] where name like '%[##cms.query.q##]%'" />
+         </basis>
+        
+
+         <basis core="print" datamembername="db.productVideo">
+    
+             <face>
+                <div class="learnBox">
+                    <div class="imgS relative flex items-center justify-center rounded-[5px] overflow-hidden">
+                       <video class="w-full h-full object-cover" loop src="/@largeIMG"></video>
+                        <div class="playbtn absolute cursor-pointer">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="54" height="54" rx="27" stroke="#F8F8F8" stroke-width="2"/>
+                                <path d="M41.0456 26.1337C42.3182 27.0215 42.3181 28.9785 41.0455 29.8663L21.3323 43.6195C19.9079 44.6133 18 43.5447 18 41.7532L18 14.2468C18 12.4553 19.9079 11.3867 21.3323 12.3805L41.0456 26.1337Z" stroke="#F8F8F8" stroke-width="2"/>
+                                </svg>
+                                
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h2 class="mt-5 mb-2.5 font-IRANSansWeb500 text-base text-nblack">
+                           @name
+                        </h2>
+                    </div>
+                    <div class="para font-IRANSansWeb400 text-sm text-nblack">
+                        <p>
+                           @description
+                        </p>
+                    </div>
+                </div>
+
+             </face>
+         </basis>
+       </basis>
+    
+
+</basis>
