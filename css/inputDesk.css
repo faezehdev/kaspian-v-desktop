@@ -4,24 +4,24 @@
 
 @font-face {
   font-family: "IRANSansWeb300";
-  src: url("../_fonts/IRANSansWeb(FaNum)_Light.eot");
-  src: url("../_fonts/IRANSansWeb(FaNum)_Light.eot?#iefix")
+  src: url("../_fonts/IRANSansWeb(FaNum)_UltraLight.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_UltraLight.eot?#iefix")
       format("embedded-opentype"),
-    url("../_fonts/IRANSansWeb(FaNum)_Light.woff") format("woff"),
-    url("../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
-    url("../_fonts/IRANSansWeb(FaNum)_Light.ttf") format("truetype");
+    url("../_fonts/IRANSansWeb(FaNum)_UltraLight.woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum)_UltraLight.woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum)_UltraLight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "IRANSansWeb400";
-  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot");
-  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+  src: url("../_fonts/IRANSansWeb(FaNum)_Light.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_Light.eot?#iefix")
       format("embedded-opentype"),
-    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum)_Light.woff") format("woff"),
     url("../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
-    url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+    url("../_fonts/IRANSansWeb(FaNum)_Light.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
   src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
       format("embedded-opentype"),
     url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
-    url("../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff2") format("woff2"),
     url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -956,4 +956,55 @@ width: 89px;
 height: 38px;
 background-color: #F8F8F8!important;
 border: none!important;
+}
+
+
+
+
+.fancy-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+}
+.fancy-spinner div {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.fancy-spinner div.ring {
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: transparent;
+  -webkit-animation: 2s fancy infinite alternate;
+          animation: 2s fancy infinite alternate;
+}
+.fancy-spinner div.ring:nth-child(1) {
+  border-left-color: #979fd0;
+  border-right-color: #979fd0;
+}
+.fancy-spinner div.ring:nth-child(2) {
+  border-top-color: #979fd0;
+  border-bottom-color: #979fd0;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.fancy-spinner div.dot {
+  width: 1rem;
+  height: 1rem;
+  background: #979fd0;
+}
+
+@-webkit-keyframes fancy {
+  to {
+    transform: rotate(360deg) scale(0.5);
+  }
+}
+
+@keyframes fancy {
+  to {
+    transform: rotate(360deg) scale(0.5);
+  }
 }
