@@ -1,101 +1,101 @@
 <basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="20" >
-     <member request="cat" type="tree" name="productCat" parentid="210503" preview="true" /> 
+    <member request="cat" type="tree" name="productCat" parentid="210503" /> 
 </basis>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محصولات</title>
-    <meta name="description" content="محصولات">
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper.css">
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>محصولات</title>
+   <meta name="description" content="محصولات">
+   <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper.css">
+   <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
 </head>
 <body class="bg-White1 ProductCat-C">
-    <main class="ProductCat-C h-screen overflow-hidden w-screen flex" dir="rtl">
-   <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
-    
-  <div class="swiper-Container mt-auto
-   w-screen h-[85vh] overflow-hidden flex relative pl-[1.5em]" dir="rtl">
-    <div class="swiper-wrapper Pin-Wrapp w-screen h-full " >
-        <div class="swiper-slide h-full" id="section-0">
-           <div class="Wrapp w-auto h-full flex" data-index="0">
-              <div class="BannerSec h-full w-auto flex justify-start items-start">
-                <div class="IMG w-[30vw] relative h-[80%]">
-                    <img src="[##cms.cms.cdn##]/images/productCat.jpg" alt="محصولات" title="محصولات"
-                     class="w-full h-full object-cover">
-                </div>
-              <span class="Pro-BTN overflow-hidden self-end translate-x-[50%] w-[200px] h-[200px] hover:cursor-pointer bg-darkgray rounded-full
-              flex flex-col justify-center items-center gap-3">
-                <span class="text font-IRANSansWeb400 translate-y-[300px] duration-[.3s]
-                 font-normal text-base leading-25.04 text-White text-center">
-                    دسته‌بندی محصولات
-                </span>
-                <span class="icon translate-y-[300px] duration-[.3s] w-auto flex justify-center items-center">
-                    <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 7L24.5 7M6.5 1L0.5 7L6.5 13" stroke="#F8F8F8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>            
-                </span>
-              </span>
-              </div>
-           </div>
-        </div>
-        <basis core="print" datamembername="basisName.productCat">
-            <layout>
-                @child
-            </layout>
-            <face filter="parentid=210503">
-                <div class="swiper-slide pro group/product">
-                    <div class="Wrapp first:border-r-[1px] border-gray h-full">
-                       <div class="Pro-Cat h-full w-[300px] flex flex-col justify-between items-start px-[2em]">
-                        <div class="Top w-full flex justify-start flex-col items-start gap-2">
-                            <div class="Title w-full flex justify-start items-start overflow-hidden">
-                                <a href="@link" alt="@title" title="@title" class="w-auto flex justify-start items-start">
-                                <h2 class="font-IRANSansWeb500 translate-y-[100%] 
-                                group-[&.inner-visible]/product:translate-y-[0] duration-[1s]
-                                 font-medium text-sm leading-21.91 text-dark1">
-                                 @title
-                                </h2></a>
-                            </div>
-                            <div class="Text  w-full flex justify-start items-start flex-col overflow-hidden">
-                                <p class="font-IRANSansWeb400 font-normal text-xs translate-y-[100%] duration-[1s]
-                                 leading-18.78 text-darkgray group-[&.inner-visible]/product:translate-y-[0]">
-                                 @urldescription
-                                </p>
-                            </div>
-                        </div>
-                        <div class="Bottom w-full flex justify-center items-center">
-                            <div class="IMG w-full flex justify-center items-center overflow-hidden">
-                                <a href="@link"  alt="@title"  title="@title" class="w-full flex justify-center items-center">
-                                <img src="@image" alt="@title"  title="@title"
-                                class="w-full group-[&.inner-visible]/product:scale-[1]
-                                object-cover scale-[1.4] duration-[1s]"></a>
-                            </div>
-                        </div>
+   <main class="ProductCat-C h-screen overflow-hidden w-screen flex" dir="rtl">
+  <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+   
+ <div class="swiper-Container mt-auto
+  w-screen h-[85vh] overflow-hidden flex relative pl-[1.5em]" dir="rtl">
+   <div class="swiper-wrapper Pin-Wrapp w-screen h-full " >
+       <div class="swiper-slide h-full" id="section-0">
+          <div class="Wrapp w-auto h-full flex" data-index="0">
+             <div class="BannerSec h-full w-auto flex justify-start items-start">
+               <div class="IMG w-[30vw] relative h-[80%]">
+                   <img src="[##cms.cms.cdn##]/images/productCat.jpg" alt="محصولات" title="محصولات"
+                    class="w-full h-full object-cover">
+               </div>
+             <span class="Pro-BTN overflow-hidden self-end translate-x-[50%] w-[200px] h-[200px] hover:cursor-pointer bg-darkgray rounded-full
+             flex flex-col justify-center items-center gap-3">
+               <span class="text font-IRANSansWeb400 translate-y-[300px] duration-[.3s]
+                font-normal text-base leading-25.04 text-White text-center">
+                   دسته‌بندی محصولات
+               </span>
+               <span class="icon translate-y-[300px] duration-[.3s] w-auto flex justify-center items-center">
+                   <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M2 7L24.5 7M6.5 1L0.5 7L6.5 13" stroke="#F8F8F8" stroke-linecap="round" stroke-linejoin="round"/>
+                   </svg>            
+               </span>
+             </span>
+             </div>
+          </div>
+       </div>
+       <basis core="print" datamembername="basisName.productCat">
+           <layout>
+               @child
+           </layout>
+           <face filter="parentid=210503">
+               <div class="swiper-slide pro group/product">
+                   <div class="Wrapp first:border-r-[1px] border-gray h-full">
+                      <div class="Pro-Cat h-full w-[300px] flex flex-col justify-between items-start px-[2em]">
+                       <div class="Top w-full flex justify-start flex-col items-start gap-2">
+                           <div class="Title w-full flex justify-start items-start overflow-hidden">
+                               <a href="@link" alt="@title" title="@title" class="w-auto flex justify-start items-start">
+                               <h2 class="font-IRANSansWeb500 translate-y-[100%] 
+                               group-[&.inner-visible]/product:translate-y-[0] duration-[1s]
+                                font-medium text-sm leading-21.91 text-dark1">
+                                @title
+                               </h2></a>
+                           </div>
+                           <div class="Text  w-full flex justify-start items-start flex-col overflow-hidden">
+                               <p class="font-IRANSansWeb400 font-normal text-xs translate-y-[100%] duration-[1s]
+                                leading-18.78 text-darkgray group-[&.inner-visible]/product:translate-y-[0]">
+                                @urldescription
+                               </p>
+                           </div>
                        </div>
-                    </div>
-                 </div>
-            </face>
-        </basis>
-      
-    
-         
-    </div>
-
-  </div>
-  <div class="Nav fixed w-[50vw] h-[5vh] bottom-[2vh] flex flex-col z-[9999] left-0 right-0 mx-auto">
-    <div class="Top relative w-full flex group/top justify-center items-center"> 
-        <div class="HoverNav absolute flex [&.show]:translate-y-[-100%] [&.show]:opacity-[1]
-         w-auto gap-[.5em] duration-[.6s] translate-y-[100%] opacity-0">
-          
-        </div>   
-        <span class="Item activeItem group-[&.Hide]/top:translate-y-[-4em] hover:cursor-pointer group-[&.Hide]/top:opacity-0">        
-                دسته‌بندی محصولات            
-        </span>
-        <div class="swiper-pagination"></div>
-    </div>
+                       <div class="Bottom w-full flex justify-center items-center">
+                           <div class="IMG group/imgg w-full flex justify-center  items-center overflow-hidden">
+                               <a href="@link"  alt="@title"  title="@title" class="w-full flex justify-center items-center">
+                               <img src="@image" alt="@title"  title="@title"
+                               class="w-full group-[&.inner-visible]/product:scale-[1] group-hover/imgg:scale-[1.4]
+                               object-cover scale-[1.4] duration-[1s]"></a>
+                           </div>
+                       </div>
+                      </div>
+                   </div>
+                </div>
+           </face>
+       </basis>
+     
+   
+        
    </div>
-    </main>
+
+ </div>
+ <div class="Nav fixed w-[50vw] h-[5vh] bottom-[2vh] flex flex-col z-[9999] left-0 right-0 mx-auto">
+   <div class="Top relative w-full flex group/top justify-center items-center"> 
+       <div class="HoverNav absolute flex [&.show]:translate-y-[-100%] [&.show]:opacity-[1]
+        w-auto gap-[.5em] duration-[.6s] translate-y-[100%] opacity-0">
+         
+       </div>   
+       <span class="Item activeItem group-[&.Hide]/top:translate-y-[-4em] hover:cursor-pointer group-[&.Hide]/top:opacity-0">        
+               دسته‌بندی محصولات            
+       </span>
+       <div class="swiper-pagination"></div>
+   </div>
+  </div>
+   </main>
 <basis core="call" file="script.inc" />
 <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
 <script src="[##cms.cms.cdn##]/js/productCat.js"></script> 

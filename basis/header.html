@@ -1,11 +1,15 @@
 <basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="20" > 
     <member request="cat" type="tree" name="productCat" parentid="210503"/> 
 </basis>
-<header class="DesktopHeader group/header w-full fixed z-[999] top-0 left-0 right-0 h-[15vh] flex
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+    <member request="cat" type="tree" name="videoList" parentid="210503" 
+    postsql="select * from [db.videoList] where parentid=210503"/>
+    </basis>
+<header class="DesktopHeader group/header w-full fixed z-[999] top-0 left-0 right-0 h-[20vh] flex
 justify-center items-center before:absolute before:w-full before:duration-150 before:ease-out
  [&.showBG]:before:h-full before:mt-auto before:top-0 before:left-0
 before:h-0 before:bg-darkov before:z-[-1]" dir="rtl">
-    <div class="Header-Inner w-95p mx-auto grid gap-[3em] grid-cols-[3fr,1fr,3fr]">
+    <div class="Header-Inner h-full w-95p mx-auto grid gap-[3em] grid-cols-[3fr,1fr,3fr]">
         <div class="Right w-full flex justify-start items-center">
             <ul class="Menu w-full flex justify-between items-center">
                 <li class="Menu-Item hover-item" id="product">
@@ -60,7 +64,7 @@ before:h-0 before:bg-darkov before:z-[-1]" dir="rtl">
                 </li>
             </ul>
         </div>
-        <div class="Middle w-full flex justify-center items-center">
+        <div class="Middle w-full flex justify-center items-center translate-y-[-1.8em]" >
             <div class="Logo">
                 <a href="/" alt="صفحه‌اصلی" title="صفحه‌اصلی">
                     <svg width="132" height="60" viewBox="0 0 132 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,8 +149,8 @@ before:h-0 before:bg-darkov before:z-[-1]" dir="rtl">
 </header>
 <div class="HoverMenu-C group/hoverMenu [&.show]:h-[70vh] z-[999] [&.showC]:h-[40vh] ease-out duration-300 
  fixed top-[15vh] left-0 right-0 bg-darkov h-0 overflow-hidden " dir="rtl">
-    <div class="Pro-container menus hidden py-[5em] overflow-y-auto w-95p gap-5 border-t-[1px] border-White1
-     mx-auto duration-75 [&.showMenu]:grid grid-cols-[1fr,1fr,1fr,1fr,1fr] h-full" id="scrollContainer">
+    <div class="Pro-container menus hidden py-[5em] overflow-y-auto w-95p gap-[1.5rem] border-t-[1px] border-White1
+     mx-auto duration-75 [&.showMenu]:grid grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr] h-full" id="scrollContainer">
      <basis core="print" datamembername="basisName.productCat">
          <layout>
              @child
@@ -171,10 +175,18 @@ before:h-0 before:bg-darkov before:z-[-1]" dir="rtl">
     </div>
     <div class="Courses-conrainer menus hidden py-[3em] overflow-hidden w-90p border-t-[1px] border-White1
     mx-auto duration-75 [&.showMenu]:flex flex-wrap gap-[5em] h-full" >
-     <!-- <a href="" class="course-link w-max font-IRANSansWeb500  hover:text-gray duration-500
+    <basis core="print" datamembername="db.videoList">
+        <layout>
+            @child
+        </layout>
+        <face> 
+              <a href="مطالب-آموزشی" alt="@title" title="@title" class="course-link w-max font-IRANSansWeb500  hover:text-gray duration-500
       font-medium text-base leading-25.04 text-White1">
-        اکسسوری
+        @title
      </a>
-      -->
+     
+        </face>
+    </basis>
+   
     </div>
 </div>
