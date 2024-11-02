@@ -920,6 +920,10 @@ video {
   margin-right: 3%;
 }
 
+.mr-\[5\%\] {
+  margin-right: 5%;
+}
+
 .mr-\[7\%\] {
   margin-right: 7%;
 }
@@ -1408,6 +1412,11 @@ video {
 
 .translate-x-\[80\%\] {
   --tw-translate-x: 80%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[-6px\] {
+  --tw-translate-y: -6px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
