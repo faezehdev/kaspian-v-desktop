@@ -2599,10 +2599,6 @@ video {
   background-color: rgb(19 19 19 / var(--tw-bg-opacity));
 }
 
-.bg-darkGray\/\[0\.5\] {
-  background-color: rgb(37 37 37 / 0.5);
-}
-
 .to-txtblack {
   --tw-gradient-to: #131313 var(--tw-gradient-to-position);
 }
