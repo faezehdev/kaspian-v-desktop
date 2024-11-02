@@ -1775,6 +1775,10 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-\[1fr\2c 1fr\2c 1fr\2c 1fr\2c 1fr\2c 1fr\] {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 .grid-cols-\[1fr\2c 1fr\2c 1fr\2c 1fr\2c 1fr\] {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -1793,10 +1797,6 @@ video {
 
 .grid-cols-\[3fr\2c 1fr\] {
   grid-template-columns: 3fr 1fr;
-}
-
-.grid-cols-\[1fr\2c 1fr\2c 1fr\2c 1fr\2c 1fr\2c 1fr\] {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .flex-row {
@@ -2011,20 +2011,16 @@ video {
   gap: .5em;
 }
 
+.gap-\[1\.5rem\] {
+  gap: 1.5rem;
+}
+
 .gap-\[3em\] {
   gap: 3em;
 }
 
 .gap-\[5em\] {
   gap: 5em;
-}
-
-.gap-\[1\.5\] {
-  gap: 1.5;
-}
-
-.gap-\[1\.5rem\] {
-  gap: 1.5rem;
 }
 
 .gap-x-16 {
@@ -4860,21 +4856,15 @@ header .label-up{
   position: relative;
 }
 
-.group\/pro:hover .group-hover\/pro\:scale-\[1\.2\] {
-  --tw-scale-x: 1.2;
-  --tw-scale-y: 1.2;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group\/img:hover .group-hover\/img\:scale-\[1\.4\] {
-  --tw-scale-x: 1.4;
-  --tw-scale-y: 1.4;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group\/imgg:hover .group-hover\/imgg\:scale-\[1\.4\] {
   --tw-scale-x: 1.4;
   --tw-scale-y: 1.4;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group\/pro:hover .group-hover\/pro\:scale-\[1\.2\] {
+  --tw-scale-x: 1.2;
+  --tw-scale-y: 1.2;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
