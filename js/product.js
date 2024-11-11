@@ -1,11 +1,12 @@
 // Main swiper
 header.classList.add('dark')
 let activeItem = document.querySelector('.activeItem')
+let nav = document.querySelector('.Nav')
 let fixNav = document.querySelector('.HoverNav')
 activeItem.addEventListener('mouseenter',()=>{
 fixNav.classList.add('show')
 })
-fixNav.addEventListener('mouseleave',()=>{
+nav.addEventListener('mouseleave',()=>{
     fixNav.classList.remove('show')
  })
 

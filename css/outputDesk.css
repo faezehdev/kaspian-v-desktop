@@ -1232,6 +1232,10 @@ video {
   width: 35px;
 }
 
+.w-\[366px\] {
+  width: 366px;
+}
+
 .w-\[40\%\] {
   width: 40%;
 }
@@ -1406,11 +1410,6 @@ video {
 
 .translate-x-\[100\%\] {
   --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-\[3\%\] {
-  --tw-translate-x: 3%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1787,6 +1786,10 @@ video {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
+.grid-cols-\[1fr\2c 1fr\2c 1fr\2c 1fr\] {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .grid-cols-\[1fr\2c 1fr\2c 1fr\] {
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -1987,6 +1990,10 @@ video {
   justify-items: stretch;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-16 {
   gap: 4rem;
 }
@@ -2017,6 +2024,10 @@ video {
 
 .gap-\[1\.5rem\] {
   gap: 1.5rem;
+}
+
+.gap-\[1em\] {
+  gap: 1em;
 }
 
 .gap-\[3em\] {
@@ -2855,6 +2866,10 @@ video {
   padding-right: 15px;
 }
 
+.pt-\[\.5em\] {
+  padding-top: .5em;
+}
+
 .pt-\[160px\] {
   padding-top: 160px;
 }
@@ -3145,6 +3160,11 @@ video {
 .text-dark1 {
   --tw-text-opacity: 1;
   color: rgb(14 14 14 / var(--tw-text-opacity));
+}
+
+.text-darkGray {
+  --tw-text-opacity: 1;
+  color: rgb(37 37 37 / var(--tw-text-opacity));
 }
 
 .text-darkgray {
@@ -3955,7 +3975,7 @@ header.dark svg path {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #f5f5f5ad;
+  background-color: #f5f5f5ed;
   z-index: 2;
 }
 
@@ -4028,11 +4048,10 @@ header.dark svg path {
 .Product-Show #section-1 .IMG::before {
   content: "";
   position: absolute;
-  background: #0e0e0e69;
   z-index: 1;
   height: 100%;
   width: 100%;
-  background: #0e0e0e99;
+  background: #0e0e0e29;
 }
 
 .Product-Show #section-1 .swiper-button-prev,
@@ -4761,6 +4780,10 @@ header .label-up {
   }
 }
 
+.ProductList-Container {
+  min-height: 50vh;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -5026,10 +5049,10 @@ header .label-up {
   position: relative;
 }
 
-.group\/imgg:hover .group-hover\/imgg\:scale-\[1\.4\] {
-  --tw-scale-x: 1.4;
-  --tw-scale-y: 1.4;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.group\/imgg:hover .group-hover\/imgg\:\!scale-\[1\.4\] {
+  --tw-scale-x: 1.4 !important;
+  --tw-scale-y: 1.4 !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
 .group\/pro:hover .group-hover\/pro\:scale-\[1\.2\] {
@@ -5130,4 +5153,8 @@ header .label-up {
 
 .\[\&\.show\]\:opacity-\[1\].show {
   opacity: 1;
+}
+
+.\[\&\:not\(\:last-child\)\]\:border-l-\[1px\]:not(:last-child) {
+  border-left-width: 1px;
 }

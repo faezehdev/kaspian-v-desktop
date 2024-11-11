@@ -42,3 +42,26 @@ margin-bottom: 3em;
     color: #131313;
     font-family: "IRANSansWeb400";
 }
+/* .HoverMenu-C{
+    gap: 0;
+}
+.HoverMenu-C .Pro-container{
+    gap: .8em;
+    padding-top: 3em;
+    overflow: hidden !important;
+
+}
+
+.HoverMenu-C .Product .IMG{
+max-width: 166px;
+max-height: 166px;
+
+}
+@media only screen and (max-width: 1400px) {
+    .HoverMenu-C .Pro-container{
+        gap: .8em;
+        padding-top: 3em;
+        overflow: hidden !important;
+        overflow-y: auto !important;
+    }
+  } */
