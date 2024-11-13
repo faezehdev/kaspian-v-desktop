@@ -1,4 +1,6 @@
 let body = document.querySelector("body");
+let lastIndex = false;
+
 const interleaveOffset = 0.75;
 body.style.position="fixed";
 const swiperHome = new Swiper(".homeSlider", {
@@ -54,6 +56,19 @@ const swiperHome = new Swiper(".homeSlider", {
         swiperHome.params.touchReleaseOnEdges = false;
         swiperHome.params.mousewheel.releaseOnEdges = false;
       });
+      if (this.activeIndex==3) {
+        lastIndex=true
+      }
+      if (lastIndex&&this.activeIndex==2) {
+        $('html, body').animate({
+          scrollTop: document.querySelector(".section1").offsetTop
+        }, 1000);
+        setTimeout(() => {
+          
+          body.style.position="fixed"
+        }, 1000);
+        lastIndex=false
+      }
     },
     reachEnd: function () {
       setTimeout(function () {

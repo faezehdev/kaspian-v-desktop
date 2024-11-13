@@ -1,7 +1,7 @@
 <basis core="group" if="[##cms.query.type##]=1">
 
     <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="210503"> 
-        <member name="videoList" type="list" perpage="300" /> </basis> 
+        <member name="videoList1" type="list" perpage="300" /> </basis> 
         <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362818"> 
             <member name="video" type="list" format="3"/> </basis>
 
@@ -34,7 +34,7 @@
         </face>
     </basis>
 
-    <basis core="repeater" name="rep" datamembername="db.videoList">
+    <basis core="repeater" name="rep" datamembername="db.videoList1">
         <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##rep.current.id##]"> 
             <member name="productVideo" type="list" format="3"/>
          </basis>
@@ -118,16 +118,16 @@
 
     
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]">
-    <member name="videoList" type="list" perpage="300" />
+    <member name="videoList1" type="list" perpage="300" />
     </basis> 
    
-    <basis core="repeater" name="rep" datamembername="db.videoList">
+    <basis core="repeater" name="rep" datamembername="db.videoList1">
         <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##rep.current.id##]"> 
             <member name="productVideo" type="list" format="3"/>
          </basis>
         
 
-         <basis core="group" if="[##db.videoList##] = ''">
+         <basis core="group" if="[##db.videoList1##] = ''">
                 <div class="para font-IRANSansWeb400 text-base text-txtblack" dir="rtl">
                     <p>
                         متاسفانه ویدیویی موجود نیست.
@@ -169,7 +169,7 @@
 
 
     <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="210503"> 
-        <member name="videoList" type="list" perpage="300" /> </basis> 
+        <member name="videoList1" type="list" perpage="300" /> </basis> 
         
         <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362818"> 
             <member name="video" type="list" format="3" postsql="select * from [db.video] where name like '%[##cms.query.q##]%'"/> 
@@ -204,7 +204,7 @@
         </face>
     </basis>
 
-    <basis core="repeater" name="rep" datamembername="db.videoList">
+    <basis core="repeater" name="rep" datamembername="db.videoList1">
         <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##rep.current.id##]"> 
             <member name="productVideo" type="list" format="3" postsql=" select * from [db.productVideo] where name like '%[##cms.query.q##]%'" />
          </basis>
