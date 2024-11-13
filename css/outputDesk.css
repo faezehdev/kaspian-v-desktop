@@ -1168,6 +1168,10 @@ video {
   height: 100svh;
 }
 
+.h-\[10vh\] {
+  height: 10vh;
+}
+
 .min-h-\[80vh\] {
   min-height: 80vh;
 }
@@ -5128,6 +5132,16 @@ header .label-up {
 .\[\&\.showBG\]\:before\:h-full.showBG::before {
   content: var(--tw-content);
   height: 100%;
+}
+
+.\[\&\.showBG\]\:before\:h-\[80\%\].showBG::before {
+  content: var(--tw-content);
+  height: 80%;
+}
+
+.\[\&\.showBG\]\:before\:h-\[78\%\].showBG::before {
+  content: var(--tw-content);
+  height: 78%;
 }
 
 .\[\&\.showC\]\:h-\[40vh\].showC {
